@@ -6,11 +6,17 @@ module.exports = {
   theme: {
     extend: {
       "colors": {
-        // Ici vos couleurs exportées de Figma
+        'blanc': '#FCFCFC',
+        'gris': '#D9D9D9',
+        'noir': '#0E0906',
+        'orange': '#E47E52',
+        'jaune': '#FCD283',
+        'vert': '#3E9399',
+        'bleu': '#30485E'
       },
       "fontFamily": {
-        // Ici vos familles de polices exportées de Figma
-        // Ne pas oublier de les charger dans '/index.html' !
+        'playfair': ['Playfair Display', 'serif'],
+        'lato': ['Lato', 'sans-serif']
       },
     },
 
