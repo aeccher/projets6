@@ -5,36 +5,50 @@
     <div class="relative rounded-xl bg-blanc p-8">
       <span @click="closePopup" class="absolute top-4 right-4 cursor-pointer">&times;</span>
       <!-- Contenu de la fenêtre pop-up -->
-      <p class="font-playfair text-xl text-noir">Dactolygraphie de la Langue des signes française (LSF)</p>
-      <img
-        src="/src/assets/images/indice_lsf.webp"
-        alt="Image de la dactolygraphie de la Langue des signes française"
-        class="m-auto mt-5"
-      />
+      <p class="text-center font-playfair text-xl text-noir">L’alphabet de l’écriture braille</p>
+      <img src="/src/assets/images/braille.webp" alt="Image de l'alphabet braille" class="m-auto mt-5 w-1/2" />
     </div>
   </div>
 
-  <div class="ml-32 mt-20 h-28 w-96 rounded-xl border-2 border-vert">
+  <div class="ml-32 mt-20 h-28 w-96 rounded-xl border-2 border-bleu">
     <h2 class="py-6 text-center font-playfair text-6xl text-noir">Énigme n°2</h2>
   </div>
 
-  <p class="mt-10 ml-32 font-lato text-sm">
-    Il faut trouver le mot suivant, écrit en utilisant la dactolygraphie de la Langue des signes française (LSF) :
-  </p>
-  <img
-    src="/src/assets/images/mot_lsf.webp"
-    alt="Image d'un mot écrit en dactolygraphie de la Langue des signes française"
-    class="m-auto mt-5 mb-20 w-1/4"
-  />
+  <div class="grid grid-cols-2">
+    <p class="mt-10 ml-32 font-lato text-sm">
+      Il te faut ici déchiffrer ce mot <span class="text-2xl">⠧⠕⠊⠗</span> et reporter l’addition si besoin du numéro de chaque lettre dans
+      l’ordre alphabétique pour trouver le code secret à entrer. Exemple : M est la 13ème lettre de l’alphabet donc 1+3 = 4
+    </p>
+    <div class="m-auto">
+      <div id="affichage" class="mb-4 w-96 border border-gris p-2 text-2xl"></div>
+      <div class="grid w-96 grid-cols-3 gap-2">
+        <button v-for="chiffre in chiffres" :key="chiffre" @click="ajouterChiffre(chiffre)" class="border border-gris p-2 text-xl">
+          {{ chiffre }}
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Affiche le bouton si le mot est correct -->
+  <Router-Link to="/enigme3">
+    <button v-if="codeCorrect" class="font-Lato m-auto mt-20 flex h-10 items-center justify-center rounded-lg bg-bleu px-20 text-blanc">
+      Énigme suivante
+    </button></Router-Link
+  >
 </template>
 <script>
 import IconIndice from "/src/components/icons/IconIndice.vue";
+import Swal from "sweetalert2"; // Utilisation de SweetAlert2
 
 export default {
   components: { IconIndice },
   data() {
     return {
       isPopupOpen: false,
+      combinaisonAttendue: "4699",
+      combinaisonActuelle: "",
+      chiffres: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9],
+      codeCorrect: false, // Variable pour suivre l'état de la validation
     };
   },
   methods: {
@@ -43,6 +57,63 @@ export default {
     },
     closePopup() {
       this.isPopupOpen = false;
+    },
+    ajouterChiffre(chiffre) {
+      this.combinaisonActuelle += chiffre.toString();
+      this.afficherCombinaison();
+
+      if (this.combinaisonActuelle.length === this.combinaisonAttendue.length) {
+        setTimeout(this.verifierCombinaison, 100);
+      }
+    },
+    afficherCombinaison() {
+      document.getElementById("affichage").innerText = this.combinaisonActuelle;
+    },
+    verifierCombinaison() {
+      if (this.combinaisonActuelle === this.combinaisonAttendue) {
+        this.codeCorrect = true; // Met à jour l'état de la validation
+        Swal.fire({
+          icon: "success",
+          title: "Félicitations!",
+          text: "Combinaison correcte !",
+          confirmButtonColor: "#30485E",
+          customClass: {
+            title: "swal-title-custom-class", // Classe pour personnaliser le style du titre
+            content: "swal-content-custom-class", // Classe pour personnaliser le style du contenu/texte
+          },
+        }).then(() => {
+          // Affiche une deuxième alerte après la fermeture de la première
+          Swal.fire({
+            icon: "info",
+            title: "L’écriture braille",
+            html: '<div style="text-align: left;">Les non-voyants lisent à l’aide de l’écriture braille. Les lettres et les chiffres sont représentés par des points en relief. En effet, ne pouvant lire avec les yeux, les aveugles lisent du bout des doigts les lettres en relief.</div>',
+            confirmButtonColor: "#30485E",
+            iconColor: "#30485E",
+            customClass: {
+              title: "swal-title-custom-class", // Classe pour personnaliser le style du titre
+              content: "swal-content-custom-class", // Classe pour personnaliser le style du contenu/texte
+            },
+          });
+        });
+      } else {
+        Swal.fire({
+          icon: "error",
+          title: "Erreur",
+          text: "Combinaison incorrecte. Réessayez.",
+          confirmButtonColor: "#30485E",
+          customClass: {
+            title: "swal-title-custom-class", // Classe pour personnaliser le style du titre
+            content: "swal-content-custom-class", // Classe pour personnaliser le style du contenu/texte
+          },
+        }).then(() => {
+          // Rafraîchir la page en cas de code incorrect
+          window.location.reload();
+        });
+      }
+    },
+    reinitialiserCoffreFort() {
+      this.combinaisonActuelle = "";
+      this.afficherCombinaison();
     },
   },
 };
