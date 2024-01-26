@@ -15,12 +15,16 @@
   </div>
 
   <div class="grid grid-cols-2">
-    <p class="mt-10 ml-32 font-lato text-sm">
-      Il te faut ici déchiffrer ce mot <span class="text-2xl">⠧⠕⠊⠗</span> et reporter l’addition si besoin du numéro de chaque lettre dans
-      l’ordre alphabétique pour trouver le code secret à entrer. Exemple : M est la 13ème lettre de l’alphabet donc 1+3 = 4
-    </p>
+    <ul class="mt-10 ml-32 font-lato text-sm">
+      <li class="flex items-center">Il te faut ici déchiffrer ce mot <span class="text-7xl">⠧⠕⠊⠗</span></li>
+      <li class="mt-5">
+        Une fois le mot trouvé, il te suffit de reporter l’addition si besoin du numéro de chaque lettre dans l’ordre alphabétique pour
+        trouver le code secret à entrer.
+      </li>
+      <li class="mt-2"><span class="underline underline-offset-2">Exemple</span>: M est la 13ème lettre de l’alphabet donc 1+3 = 4</li>
+    </ul>
     <div class="m-auto">
-      <div id="affichage" class="mb-4 w-96 border border-gris p-2 text-2xl"></div>
+      <div id="affichage" class="mb-4 h-12 w-96 border border-gris p-2 text-2xl"></div>
       <div class="grid w-96 grid-cols-3 gap-2">
         <button v-for="chiffre in chiffres" :key="chiffre" @click="ajouterChiffre(chiffre)" class="border border-gris p-2 text-xl">
           {{ chiffre }}
