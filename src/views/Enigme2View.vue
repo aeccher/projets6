@@ -29,6 +29,8 @@
         <button v-for="chiffre in chiffres" :key="chiffre" @click="ajouterChiffre(chiffre)" class="border border-gris p-2 text-xl">
           {{ chiffre }}
         </button>
+        <button @click="resetCombinaison" class="border border-gris p-2 text-xl">Reset</button>
+        <button @click="effacerDernierNumero" class="border border-gris p-2 text-xl">Effacer</button>
       </div>
     </div>
   </div>
@@ -72,6 +74,14 @@ export default {
     },
     afficherCombinaison() {
       document.getElementById("affichage").innerText = this.combinaisonActuelle;
+    },
+    resetCombinaison() {
+      this.combinaisonActuelle = "";
+      this.afficherCombinaison();
+    },
+    effacerDernierNumero() {
+      this.combinaisonActuelle = this.combinaisonActuelle.slice(0, -1);
+      this.afficherCombinaison();
     },
     verifierCombinaison() {
       if (this.combinaisonActuelle === this.combinaisonAttendue) {
@@ -122,3 +132,12 @@ export default {
   },
 };
 </script>
+
+<style>
+.swal-title-custom-class {
+  font-family: "Playfair Display", serif;
+}
+.swal-content-custom-class {
+  font-family: "Lato", sans-serif;
+}
+</style>

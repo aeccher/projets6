@@ -98,7 +98,7 @@ export default {
             Swal.fire({
               icon: "info",
               title: "Hiéroglyphes",
-              html: '<div style="text-align: left;">Pour écrire, les anciens Égyptiens utilisaient des hiéroglyphe. Dans ce système d’écriture, les dessins tiennent lieu de lettres. Il y a des centaines de hiéroglyphes différents : seulement une sélection est utilisée ici. </div>',
+              html: '<div style="text-align: left;">Pour écrire, les anciens Égyptiens utilisaient des hiéroglyphe. Dans ce système d’écriture, les dessins tiennent lieu de lettres. Il y a des centaines de hiéroglyphes différents : seulement une sélection est utilisée ici et n\'est pas basée sur un alphabet officiel. </div>',
               confirmButtonColor: "#E47E52",
               iconColor: "#E47E52",
               customClass: {
@@ -149,5 +149,12 @@ export default {
   border: 1px solid #ccc;
   background-color: #fff;
   cursor: pointer;
+}
+
+.swal-title-custom-class {
+  font-family: "Playfair Display", serif;
+}
+.swal-content-custom-class {
+  font-family: "Lato", sans-serif;
 }
 </style>
