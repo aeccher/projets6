@@ -6,6 +6,7 @@ import Enigme2View from '../views/Enigme2View.vue'
 import Enigme3View from '../views/Enigme3View.vue'
 import Enigme4View from '../views/Enigme4View.vue'
 import Enigme5View from '../views/Enigme5View.vue'
+import Enigme6View from '../views/Enigme6View.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -17,6 +18,7 @@ const router = createRouter({
     { path: '/enigme3', name: 'Enigme3', component: Enigme3View },
     { path: '/enigme4', name: 'Enigme4', component: Enigme4View },
     { path: '/enigme5', name: 'Enigme5', component: Enigme5View },
+    { path: '/enigme6', name: 'Enigme6', component: Enigme6View },
   ]
 })
 
