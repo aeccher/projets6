@@ -7,8 +7,8 @@
         codes soient tous différents, ils visent tous à améliorer la communication entre les êtres humains.
       </p>
       <p class="px-8 pt-2 font-lato text-sm">
-        Ce jeu vous permettra de faire connaissance avec certains codes différents utilisés. En effet, en jouant à ce jeu votre mission va
-        consister à résoudre des énigmes en décryptant des textes codés, trouver un code secret, ...
+        Ce jeu vous permettra de faire connaissance avec certains codes différents. En effet, en jouant à ce jeu votre mission va consister
+        à résoudre des énigmes en décryptant des textes codés, trouver un code secret, associer des mots à leur langue ...
       </p>
       <p class="px-8 pt-2 font-lato text-sm">Dans chaque énigme, vous trouverez un indice qui vous aidera à la résoudre.</p>
       <div class="flex">
