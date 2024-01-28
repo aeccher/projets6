@@ -5,7 +5,7 @@
     <div class="relative rounded-xl bg-blanc p-8">
       <span @click="closePopup" class="absolute top-4 right-4 cursor-pointer">&times;</span>
       <!-- Contenu de la fenêtre pop-up -->
-      <p class="font-playfair text-xl text-noir">Dactylographie de la Langue des signes française (LSF)</p>
+      <p class="text-center font-playfair text-xl text-noir">Dactylographie de la Langue des signes française (LSF)</p>
       <img
         src="/src/assets/images/indice_lsf.webp"
         alt="Image de la dactylographie de la Langue des signes française"
