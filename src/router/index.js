@@ -32,5 +32,13 @@ const router = createRouter({
   ]
 })
 
+// Avant chaque changement de route, enregistre la route actuelle dans le localStorage
+router.beforeEach((to, from, next) => {
+  // Si la route actuelle est différente de la dernière visitée, enregistrez la nouvelle route
+  if (to.path !== localStorage.getItem('lastVisitedPage')) {
+    localStorage.setItem('lastVisitedPage', to.path)
+  }
+  next()
+})
 export default router
 
