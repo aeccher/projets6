@@ -7,7 +7,7 @@
       </div>
     </div>
 
-    <Router-Link to="/consignes">
+    <Router-Link to="/connexion">
       <button class="font-Lato m-auto flex h-10 items-center justify-center rounded-lg bg-orange px-20 text-blanc">
         Commencer
       </button></Router-Link

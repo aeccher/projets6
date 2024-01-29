@@ -56,7 +56,7 @@ export default {
             },
           }).then(() => {
             // Redirection vers '/enigmes' après la fermeture du message (alert)
-            this.$router.push("/enigme1");
+            this.$router.push("/consignes");
           });
         }
       } catch (error) {
