@@ -15,6 +15,8 @@
     </div>
   </div>
 
+  <Router-Link to="/enigmes"><IconRetour class="absolute left-10 top-10 w-14 cursor-pointer" /></Router-Link>
+
   <div class="ml-32 mt-20 h-28 w-96 rounded-xl border-2 border-bleu">
     <h2 class="py-6 text-center font-playfair text-6xl text-noir">Énigme n°6</h2>
 
@@ -69,10 +71,11 @@
 
 <script>
 import IconIndice from "/src/components/icons/IconIndice.vue";
+import IconRetour from "/src/components/icons/IconRetour.vue";
 import Swal from "sweetalert2";
 
 export default {
-  components: { IconIndice },
+  components: { IconIndice, IconRetour },
   data() {
     return {
       isPopupOpen: false,

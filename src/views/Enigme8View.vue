@@ -11,6 +11,8 @@
     </div>
   </div>
 
+  <Router-Link to="/enigmes"><IconRetour class="absolute left-10 top-10 w-14 cursor-pointer" /></Router-Link>
+
   <div class="ml-32 mt-20 h-28 w-96 rounded-xl border-2 border-jaune">
     <h2 class="py-6 text-center font-playfair text-6xl text-noir">Énigme n°8</h2>
   </div>
@@ -47,10 +49,11 @@
 
 <script>
 import IconIndice from "/src/components/icons/IconIndice.vue";
+import IconRetour from "/src/components/icons/IconRetour.vue";
 import Swal from "sweetalert2"; // Utilisation de SweetAlert2
 
 export default {
-  components: { IconIndice },
+  components: { IconIndice, IconRetour },
   data() {
     return {
       isPopupOpen: false,
@@ -134,8 +137,10 @@ export default {
 
 <style>
 .cell {
-  width: 50px !important;
-  height: 50px !important;
+  width: 50px;
+  height: 50px;
+  max-width: 50px;
+  max-height: 50px;
   border: 1px solid #2d3748;
 }
 
