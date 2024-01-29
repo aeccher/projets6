@@ -65,8 +65,14 @@ export default {
       this.isPopupOpen = false;
     },
     shuffleArray(array) {
-      return array.slice().sort(() => Math.random() - 0.5);
+      // Shuffling the array while ensuring that it is not in the order "LEGO"
+      let shuffledArray = array.slice();
+      while (shuffledArray.join("") === "LEGO") {
+        shuffledArray = array.slice().sort(() => Math.random() - 0.5);
+      }
+      return shuffledArray;
     },
+
     dragStart(index) {
       event.dataTransfer.setData("text/plain", index.toString());
     },
