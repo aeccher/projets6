@@ -27,7 +27,7 @@
     </div>
 
     <!-- Lettres à glisser -->
-    <div class="container">
+    <div class="container text-2xl">
       <div class="draggable" id="draggable-fehu" draggable="true" @dragstart="drag">ᚠ</div>
       <div class="draggable" id="draggable-uruz" draggable="true" @dragstart="drag">ᚢ</div>
       <div class="draggable" id="draggable-thurisaz" draggable="true" @dragstart="drag">ᚦ</div>
