@@ -21,7 +21,8 @@
     </div>
 
     <p class="mt-10 ml-32 font-lato text-sm">
-      Il suffit de reproduire la première lettre du mot hiéroglyphe en noircissant au clic les cases de la grille.
+      Il suffit, en utilisant les hiéroglyphes, de reproduire la première lettre du mot hiéroglyphe en noircissant au clic les cases de la
+      grille.
     </p>
     <!-- Grille -->
     <div id="grille" class="mt-5 ml-32"></div>
