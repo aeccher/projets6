@@ -155,8 +155,10 @@ export default {
 }
 
 .cell {
-  width: 30px !important;
-  height: 30px !important;
+  width: 30px;
+  height: 30px;
+  max-width: 30px;
+  max-height: 30px;
   border: 1px solid #ccc;
   background-color: #fff;
   cursor: pointer;
