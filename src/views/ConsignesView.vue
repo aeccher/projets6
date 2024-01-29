@@ -15,6 +15,10 @@
         <p class="px-8 pt-2 font-lato text-sm">Pour obtenir un indice il faudra cliquer sur :</p>
         <IconIndice class="pt-2" />
       </div>
+      <div class="flex">
+        <p class="px-8 pt-4 font-lato text-sm">Pour revenir à la page qui donne accès à toute les énigmes, il faudra cliquer sur :</p>
+        <IconRetour />
+      </div>
       <p class="px-8 pt-4 font-lato text-sm">
         Munissez vous de quoi écrire (un papier et un stylo) cela vous sera utile pour réfléchir aux énigmes.
       </p>
@@ -29,8 +33,9 @@
 
 <script>
 import IconIndice from "/src/components/icons/IconIndice.vue";
+import IconRetour from "/src/components/icons/IconRetour.vue";
 
 export default {
-  components: { IconIndice },
+  components: { IconIndice, IconRetour },
 };
 </script>
