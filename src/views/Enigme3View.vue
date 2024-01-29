@@ -71,16 +71,22 @@ export default {
       this.isPopupOpen = false;
     },
     toggleCellColor(cell) {
-      // Fonction pour changer la couleur de la cellule
       const row = parseInt(cell.dataset.row);
       const col = parseInt(cell.dataset.col);
 
-      const currentColor = cell.style.backgroundColor;
-      const newColor = currentColor === "rgb(255, 255, 255)" ? "rgb(0, 0, 0)" : "rgb(255, 255, 255)";
-      cell.style.backgroundColor = newColor;
+      const isCellClicked = cell.classList.contains("clicked");
 
-      // Met à jour le modèle de données
-      this.clickedPattern[row][col] = newColor === "rgb(0, 0, 0)" ? 1 : 0;
+      // Si la cellule a déjà été cliquée, enlevez la classe et changez la couleur à blanc
+      if (isCellClicked) {
+        cell.classList.remove("clicked");
+        cell.style.backgroundColor = "rgb(255, 255, 255)";
+        this.clickedPattern[row][col] = 0;
+      } else {
+        // Sinon, ajoutez la classe et changez la couleur à noir
+        cell.classList.add("clicked");
+        cell.style.backgroundColor = "rgb(0, 0, 0)";
+        this.clickedPattern[row][col] = 1;
+      }
 
       this.checkCompletion();
     },
@@ -153,6 +159,10 @@ export default {
   border: 1px solid #ccc;
   background-color: #fff;
   cursor: pointer;
+}
+
+.cell.clicked {
+  background-color: rgb(0, 0, 0);
 }
 
 .swal-title-custom-class {
