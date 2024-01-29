@@ -4,9 +4,7 @@
       <h2 class="py-6 text-center font-playfair text-6xl text-noir">Énigme n°5</h2>
     </div>
 
-    <p class="mt-10 ml-32 font-lato text-sm">
-      C’est un jeu d’appariement. Un clic sur le mot puis sur la langue qui lui correspond et c’est gagné.
-    </p>
+    <p class="mt-10 ml-32 font-lato text-sm">Un clic sur le mot puis sur la langue qui lui correspond et c’est gagné.</p>
 
     <div class="game-container">
       <ul class="word-list" id="wordList">
@@ -15,6 +13,7 @@
         <li data-language="es">Gato</li>
         <li data-language="de">Hund</li>
         <li data-language="it">Gatto</li>
+        <li data-language="en">Dog</li>
       </ul>
 
       <ul class="language-list" id="languageList">
@@ -23,6 +22,7 @@
         <li data-language="es">Espagnol</li>
         <li data-language="de">Allemand</li>
         <li data-language="it">Italien</li>
+        <li data-language="en">Anglais</li>
       </ul>
     </div>
   </div>
@@ -60,6 +60,7 @@ export default {
           Gato: "es",
           Hund: "de",
           Gatto: "it",
+          Dog: "en",
         };
 
         const correctMatch = wordLanguagePairs[this.selectedWord] === this.selectedLanguage;
@@ -72,7 +73,7 @@ export default {
       this.selectedLanguage = null;
 
       // Vérifier si toutes les réponses ont été données
-      if (this.allResponses.length === 4) {
+      if (this.allResponses.length === 5) {
         if (this.allCorrect) {
           this.correct = true; // Met à jour l'état de la validation
           Swal.fire({

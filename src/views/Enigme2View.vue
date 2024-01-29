@@ -35,7 +35,7 @@
     </div>
   </div>
 
-  <!-- Affiche le bouton si le mot est correct -->
+  <!-- Affiche le bouton si le code est correct -->
   <Router-Link to="/enigme3">
     <button v-if="codeCorrect" class="font-Lato m-auto mt-20 flex h-10 items-center justify-center rounded-lg bg-bleu px-20 text-blanc">
       Énigme suivante

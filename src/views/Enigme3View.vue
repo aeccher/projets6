@@ -26,7 +26,7 @@
     <!-- Grille -->
     <div id="grille" class="mt-5 ml-32"></div>
 
-    <!-- Affiche le bouton si le mot est correct -->
+    <!-- Affiche le bouton si c'est correct -->
     <Router-Link to="/enigme4">
       <button v-if="correct" class="font-Lato m-auto mt-5 flex h-10 items-center justify-center rounded-lg bg-orange px-20 text-blanc">
         Énigme suivante
