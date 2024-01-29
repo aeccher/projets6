@@ -18,7 +18,7 @@
       <p class="px-8 pt-4 font-lato text-sm">
         Munissez vous de quoi écrire (un papier et un stylo) cela vous sera utile pour réfléchir aux énigmes.
       </p>
-      <Router-Link to="/enigme1">
+      <Router-Link to="/enigmes">
         <button class="font-Lato m-auto mb-16 mt-28 flex h-10 items-center justify-center rounded-lg bg-jaune px-20 text-noir">
           Jouer
         </button></Router-Link
