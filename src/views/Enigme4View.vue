@@ -27,9 +27,9 @@
   <video v-if="!isPopupOpen" src="/src/assets/video/morse.mp4" controls class="m-auto my-10 h-48"></video>
 
   <!-- Champ texte pour la validation -->
-  <label for="motLSF" class="ml-32 font-lato text-sm text-noir">Entrez le mot :</label>
-  <input type="text" id="motLSF" v-model="motLSF" class="ml-4 rounded-md border-2 border-jaune" />
-  <button @click="validerMotLSF" class="ml-4 cursor-pointer rounded-xl bg-jaune py-2 px-4 text-noir">Valider</button>
+  <label for="motMorse" class="ml-32 font-lato text-sm text-noir">Entrez le mot :</label>
+  <input type="text" id="motMorse" v-model="motMorse" class="ml-4 rounded-md border-2 border-jaune" />
+  <button @click="validermotMorse" class="ml-4 cursor-pointer rounded-xl bg-jaune py-2 px-4 text-noir">Valider</button>
 
   <!-- Affiche le bouton si le mot est correct -->
   <Router-Link to="/enigme5">
@@ -49,7 +49,7 @@ export default {
   data() {
     return {
       isPopupOpen: false,
-      motLSF: "", // Variable pour stocker la valeur du champ texte
+      motMorse: "", // Variable pour stocker la valeur du champ texte
       motCorrect: false, // Variable pour suivre l'état de la validation
     };
   },
@@ -60,12 +60,12 @@ export default {
     closePopup() {
       this.isPopupOpen = false;
     },
-    validerMotLSF() {
+    validermotMorse() {
       // Définir le mot correct
       var motCorrectLSF = "codage";
 
       // Vérifier si la valeur correspond au mot correct
-      if (this.motLSF.toLowerCase() === motCorrectLSF) {
+      if (this.motMorse.toLowerCase() === motCorrectLSF) {
         this.motCorrect = true; // Met à jour l'état de la validation
         Swal.fire({
           icon: "success",
