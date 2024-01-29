@@ -45,6 +45,8 @@ export default {
       selectedLanguage: null,
       allResponses: [],
       correct: false, // Variable pour suivre l'état de la validation
+      selectedWordElement: null,
+      selectedLanguageElement: null,
     };
   },
   computed: {
@@ -71,6 +73,8 @@ export default {
     resetSelection() {
       this.selectedWord = null;
       this.selectedLanguage = null;
+      this.selectedWordElement = null;
+      this.selectedLanguageElement = null;
 
       // Vérifier si toutes les réponses ont été données
       if (this.allResponses.length === 5) {
@@ -117,7 +121,13 @@ export default {
     wordList.addEventListener("click", (event) => {
       const clickedWord = event.target;
       if (clickedWord.tagName === "LI") {
+        if (this.selectedWordElement) {
+          this.selectedWordElement.style.backgroundColor = "#e0e0e0";
+        }
+        clickedWord.style.backgroundColor = "#3e9399";
+        clickedWord.style.color = "#FFF";
         this.selectedWord = clickedWord.textContent;
+        this.selectedWordElement = clickedWord;
         this.checkMatch();
       }
     });
@@ -126,7 +136,14 @@ export default {
     languageList.addEventListener("click", (event) => {
       const clickedLanguage = event.target;
       if (clickedLanguage.tagName === "LI") {
+        if (this.selectedLanguageElement) {
+          this.selectedLanguageElement.style.backgroundColor = "#3e9399";
+          this.selectedLanguageElement.style.color = "#fff";
+        }
+        clickedLanguage.style.backgroundColor = "#e0e0e0";
+        clickedLanguage.style.color = "#000";
         this.selectedLanguage = clickedLanguage.dataset.language;
+        this.selectedLanguageElement = clickedLanguage;
         this.checkMatch();
       }
     });
