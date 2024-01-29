@@ -28,7 +28,7 @@
           :class="{ cell: true, found: cell.found }"
           @click="cell.type === 'emoji' ? validateLetter(rowIndex, colIndex) : null"
         >
-          <span v-if="cell.type === 'emoji'" class="text-2xl">
+          <span v-if="cell.type === 'emoji'" class="text-4xl">
             {{ cell.letter }}
           </span>
           <span v-else class="text-sm">{{ cell.emoji }}</span>
@@ -134,8 +134,8 @@ export default {
 
 <style>
 .cell {
-  width: 40px;
-  height: 40px;
+  width: 50px;
+  height: 50px;
   border: 1px solid #2d3748;
 }
 
