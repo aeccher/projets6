@@ -53,7 +53,7 @@ export default {
           icon: "success",
           title: "Félicitations!",
           text: "Mot correct. Bravo! Vous avez résolu l'énigme.",
-          confirmButtonColor: "#3e9399",
+          confirmButtonColor: "#30485E",
           customClass: {
             title: "swal-title-custom-class", // Classe pour personnaliser le style du titre
             content: "swal-content-custom-class", // Classe pour personnaliser le style du contenu/texte
@@ -64,8 +64,8 @@ export default {
             icon: "info",
             title: "L'alphabet militaire de l'OTAN",
             html: "<div style=\"text-align: left;\">L'alphabet militaire de l'OTAN est un ensemble de mots distincts utilisés pour coder et décoder les messages. Il est utilisé par les forces armées de nombreux pays, ainsi que par les radioamateurs et d'autres professionnels qui doivent communiquer de manière claire et concise.</div>",
-            confirmButtonColor: "#3e9399",
-            iconColor: "#3e9399",
+            confirmButtonColor: "#30485E",
+            iconColor: "#30485E",
             customClass: {
               title: "swal-title-custom-class", // Classe pour personnaliser le style du titre
               content: "swal-content-custom-class", // Classe pour personnaliser le style du contenu/texte
@@ -80,7 +80,7 @@ export default {
           icon: "error",
           title: "Erreur",
           text: "Mot incorrect! Veuillez réessayer pour entrer le mot correct.",
-          confirmButtonColor: "#3e9399",
+          confirmButtonColor: "#30485E",
           customClass: {
             title: "swal-title-custom-class", // Classe pour personnaliser le style du titre
             content: "swal-content-custom-class", // Classe pour personnaliser le style du contenu/texte
