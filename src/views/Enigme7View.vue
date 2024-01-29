@@ -127,7 +127,7 @@ export default {
         Swal.fire({
           icon: "error",
           title: "Erreur",
-          text: "Désolé, veuillez réessayer..",
+          text: "Désolé, veuillez réessayer...",
           confirmButtonColor: "#E47E52",
           customClass: {
             title: "swal-title-custom-class", // Classe pour personnaliser le style du titre

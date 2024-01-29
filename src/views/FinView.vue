@@ -9,7 +9,7 @@
 
     <Router-Link to="/">
       <button class="font-Lato m-auto flex h-10 items-center justify-center rounded-lg bg-orange px-20 text-blanc">
-        Retour à l'accueil
+        Retour au début
       </button></Router-Link
     >
   </main>
