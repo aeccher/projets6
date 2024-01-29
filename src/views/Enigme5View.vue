@@ -123,6 +123,7 @@ export default {
       if (clickedWord.tagName === "LI") {
         if (this.selectedWordElement) {
           this.selectedWordElement.style.backgroundColor = "#e0e0e0";
+          this.selectedWordElement.style.color = "#000";
         }
         clickedWord.style.backgroundColor = "#3e9399";
         clickedWord.style.color = "#FFF";
