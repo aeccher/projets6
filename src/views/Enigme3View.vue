@@ -25,7 +25,16 @@
       grille.
     </p>
     <!-- Grille -->
-    <div id="grille" class="mt-5 ml-32"></div>
+    <div id="grille" class="mt-5 ml-32">
+      <div class="row-numbers">
+        <!-- Numéros de ligne -->
+        <div v-for="i in 10" :key="i" class="cell number-cell">{{ i - 1 }}</div>
+      </div>
+      <div class="column-numbers">
+        <!-- Numéros de colonne -->
+        <div v-for="i in 10" :key="i" class="cell number-cell">{{ i - 1 }}</div>
+      </div>
+    </div>
 
     <!-- Affiche le bouton si c'est correct -->
     <Router-Link to="/enigme4">
@@ -166,6 +175,35 @@ export default {
 
 .cell.clicked {
   background-color: rgb(0, 0, 0);
+}
+
+.number-cell {
+  width: 30px;
+  height: 30px;
+  max-width: 30px;
+  max-height: 30px;
+  border: 1px solid #ccc;
+  background-color: #d9d9d9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+}
+
+.row-numbers {
+  display: grid;
+  grid-template-columns: 30px;
+  grid-template-rows: repeat(10, 30px);
+  gap: 1px;
+  position: absolute;
+}
+
+.column-numbers {
+  display: grid;
+  grid-template-columns: repeat(10, 30px);
+  grid-template-rows: 30px;
+  gap: 1px;
+  position: absolute;
 }
 
 .swal-title-custom-class {
