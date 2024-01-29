@@ -25,14 +25,14 @@
       grille.
     </p>
     <!-- Grille -->
-    <div id="grille" class="mt-5 ml-32">
+    <div id="grille" class="mt-12 ml-32">
       <div class="row-numbers">
         <!-- Numéros de ligne -->
-        <div v-for="i in 10" :key="i" class="cell number-cell">{{ i - 1 }}</div>
+        <div v-for="i in 10" :key="i" class="cell number-cell">{{ i }}</div>
       </div>
       <div class="column-numbers">
         <!-- Numéros de colonne -->
-        <div v-for="i in 10" :key="i" class="cell number-cell">{{ i - 1 }}</div>
+        <div v-for="i in 10" :key="i" class="cell number-cell">{{ i }}</div>
       </div>
     </div>
 
@@ -196,6 +196,7 @@ export default {
   grid-template-rows: repeat(10, 30px);
   gap: 1px;
   position: absolute;
+  margin-left: -30px;
 }
 
 .column-numbers {
@@ -204,6 +205,7 @@ export default {
   grid-template-rows: 30px;
   gap: 1px;
   position: absolute;
+  margin-top: -30px;
 }
 
 .swal-title-custom-class {
