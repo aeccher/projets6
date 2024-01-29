@@ -31,7 +31,7 @@
         </div>
       </div>
     </div>
-    <!-- Affiche le bouton si le mot est correct -->
+    <!-- Affiche le bouton si c'est correct -->
     <Router-Link to="/enigme10">
       <button v-if="correct" class="font-Lato m-auto mt-10 flex h-10 items-center justify-center rounded-lg bg-vert px-20 text-blanc">
         Énigme suivante
@@ -59,7 +59,7 @@ export default {
         { value: "E", displayValue: "E", isFlipped: false, isMatched: false },
         { value: "E", displayValue: "69", isFlipped: false, isMatched: false },
         { value: "H", displayValue: "H", isFlipped: false, isMatched: false },
-        { value: "H", displayValue: "71", isFlipped: false, isMatched: false },
+        { value: "H", displayValue: "72", isFlipped: false, isMatched: false },
         { value: "K", displayValue: "K", isFlipped: false, isMatched: false },
         { value: "K", displayValue: "75", isFlipped: false, isMatched: false },
         { value: "M", displayValue: "M", isFlipped: false, isMatched: false },
@@ -138,6 +138,29 @@ export default {
     checkWin() {
       if (this.cards.every((card) => card.isMatched)) {
         this.correct = true;
+        Swal.fire({
+          icon: "success",
+          title: "Félicitations!",
+          text: "Vous avez résolu l'énigme.",
+          confirmButtonColor: "#3e9399",
+          customClass: {
+            title: "swal-title-custom-class", // Classe pour personnaliser le style du titre
+            content: "swal-content-custom-class", // Classe pour personnaliser le style du contenu/texte
+          },
+        }).then(() => {
+          // Afficher une deuxième alerte après la fermeture de la première
+          Swal.fire({
+            icon: "info",
+            title: "Le code ASCII",
+            html: "<div style=\"text-align: left;\">L'American Standard Code for Information Interchange (ASCII), est une norme informatique de codage des caractères.Les premiers 32 caractères de l'ASCII sont des caractères de contrôle, qui sont utilisés pour contrôler les périphériques d'entréesortie, tels que les imprimantes et les terminaux. Les 96 caractères suivants représentent les lettres de l'alphabet latin, les chiffres arabes, les signes de ponctuation et quelques symboles divers.</div>",
+            confirmButtonColor: "#3e9399",
+            iconColor: "#3e9399",
+            customClass: {
+              title: "swal-title-custom-class", // Classe pour personnaliser le style du titre
+              content: "swal-content-custom-class", // Classe pour personnaliser le style du contenu/texte
+            },
+          });
+        });
       }
     },
   },
