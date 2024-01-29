@@ -40,7 +40,10 @@
 
     <!-- Affiche le bouton si c'est correct -->
     <Router-Link to="/enigme4">
-      <button v-if="correct" class="font-Lato m-auto mt-5 flex h-10 items-center justify-center rounded-lg bg-orange px-20 text-blanc">
+      <button
+        v-if="correct"
+        class="font-Lato m-auto mt-5 flex h-10 items-center justify-center rounded-lg bg-orange px-20 text-blanc hover:bg-opacity-75"
+      >
         Énigme suivante
       </button>
     </Router-Link>

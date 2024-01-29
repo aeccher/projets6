@@ -23,7 +23,9 @@
         Munissez vous de quoi écrire (un papier et un stylo) cela vous sera utile pour réfléchir aux énigmes.
       </p>
       <Router-Link to="/enigmes">
-        <button class="font-Lato m-auto mb-16 mt-28 flex h-10 items-center justify-center rounded-lg bg-jaune px-20 text-noir">
+        <button
+          class="font-Lato m-auto mb-10 mt-20 flex h-10 items-center justify-center rounded-lg bg-jaune px-20 text-noir hover:bg-opacity-75"
+        >
           Jouer
         </button></Router-Link
       >

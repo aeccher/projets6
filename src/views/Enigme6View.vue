@@ -63,7 +63,10 @@
 
   <!-- Affiche le bouton si le mot est correct -->
   <Router-Link to="/enigme7">
-    <button v-if="motCorrect" class="font-Lato m-auto mt-72 flex h-10 items-center justify-center rounded-lg bg-bleu px-20 text-blanc">
+    <button
+      v-if="motCorrect"
+      class="font-Lato m-auto mt-72 flex h-10 items-center justify-center rounded-lg bg-bleu px-20 text-blanc hover:bg-opacity-75"
+    >
       Énigme suivante
     </button>
   </Router-Link>

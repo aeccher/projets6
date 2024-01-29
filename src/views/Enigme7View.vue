@@ -37,7 +37,10 @@
 
   <!-- Affiche le bouton si le mot est correct -->
   <Router-Link to="/enigme8">
-    <button v-if="correct" class="font-Lato m-auto mt-40 flex h-10 items-center justify-center rounded-lg bg-orange px-20 text-blanc">
+    <button
+      v-if="correct"
+      class="font-Lato m-auto mt-40 flex h-10 items-center justify-center rounded-lg bg-orange px-20 text-blanc hover:bg-opacity-75"
+    >
       Énigme suivante
     </button>
   </Router-Link>

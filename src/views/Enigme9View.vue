@@ -35,7 +35,10 @@
     </div>
     <!-- Affiche le bouton si c'est correct -->
     <Router-Link to="/enigme10">
-      <button v-if="correct" class="font-Lato m-auto mt-10 flex h-10 items-center justify-center rounded-lg bg-vert px-20 text-blanc">
+      <button
+        v-if="correct"
+        class="font-Lato m-auto mt-10 flex h-10 items-center justify-center rounded-lg bg-vert px-20 text-blanc hover:bg-opacity-75"
+      >
         Énigme suivante
       </button></Router-Link
     >

@@ -8,7 +8,7 @@
     </div>
 
     <Router-Link to="/connexion">
-      <button class="font-Lato m-auto flex h-10 items-center justify-center rounded-lg bg-orange px-20 text-blanc">
+      <button class="font-Lato m-auto flex h-10 items-center justify-center rounded-lg bg-orange px-20 text-blanc hover:bg-opacity-75">
         Commencer
       </button></Router-Link
     >
