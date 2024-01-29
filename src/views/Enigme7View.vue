@@ -10,7 +10,7 @@
       <img
         src="/src/assets/images/matoran.webp"
         alt="Image de lettres matoran qui correspondent à l'alphabet français"
-        class="m-auto mt-5"
+        class="m-auto mt-5 w-1/2"
       />
     </div>
   </div>
