@@ -8,7 +8,11 @@
         <span @click="closePopup" class="absolute top-4 right-4 cursor-pointer">&times;</span>
         <!-- Contenu de la fenêtre pop-up -->
         <p class="text-center font-playfair text-xl text-noir">Hiéroglyphes</p>
-        <img src="/src/assets/images/hieroglyphes.webp" alt="Image de l'alphabet hiéroglyphes" class="m-auto mt-5 w-3/4" />
+        <img src="/src/assets/images/hieroglyphes.webp" alt="Image de l'alphabet hiéroglyphes" class="m-auto mt-5 w-1/2" />
+        <p class="mt-10 font-lato text-sm">
+          Début à la 2ème colonne 9ème ligne. 8 cases vers le haut / 7 cases vers la droite / 7 cases vers le bas / 3 cases à gauche / 5
+          cases vers le haut
+        </p>
       </div>
     </div>
 
