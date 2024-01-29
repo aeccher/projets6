@@ -27,7 +27,7 @@
     </div>
   </div>
 
-  <!-- Affiche le bouton si le mot est correct -->
+  <!-- Affiche le bouton si c'est correct -->
   <Router-Link to="/enigme6">
     <button v-if="correct" class="font-Lato m-auto mt-52 flex h-10 items-center justify-center rounded-lg bg-vert px-20 text-blanc">
       Énigme suivante

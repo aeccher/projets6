@@ -134,8 +134,8 @@ export default {
 
 <style>
 .cell {
-  width: 50px;
-  height: 50px;
+  width: 50px !important;
+  height: 50px !important;
   border: 1px solid #2d3748;
 }
 
