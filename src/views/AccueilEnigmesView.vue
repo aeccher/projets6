@@ -1,6 +1,7 @@
 <template>
   <main class="grid h-[900px] bg-bleu">
-    <div class="flex items-center justify-center">
+    <Router-Link to="/consignes"><IconRetour class="absolute left-10 top-10 cursor-pointer" :color="'white'" /></Router-Link>
+    <div class="-mt-20 flex justify-center">
       <Router-Link to="/enigme1"
         ><div class="relative flex items-center justify-center">
           <img src="/src/assets/images/Bulle.webp" alt="Image d'une bulle de conversation" class="w-1/2 pt-10" />
@@ -42,7 +43,7 @@
         </div></Router-Link
       >
     </div>
-    <div class="flex justify-center">
+    <div class="-mt-40 flex justify-center">
       <Router-Link to="/enigme6"
         ><div class="relative flex items-center justify-center">
           <img src="/src/assets/images/Bulle.webp" alt="Image d'une bulle de conversation" class="w-1/2 pt-10" />
@@ -87,4 +88,10 @@
   </main>
 </template>
 
-<script></script>
+<script>
+import IconRetour from "/src/components/icons/IconRetour.vue";
+
+export default {
+  components: { IconRetour },
+};
+</script>
