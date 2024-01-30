@@ -169,6 +169,7 @@ export default {
 .language-list {
   list-style: none;
   padding: 0;
+  font-family: "Lato", sans-serif;
 }
 
 .word-list li,
