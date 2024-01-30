@@ -203,6 +203,7 @@ export default {
   gap: 1px;
   position: absolute;
   margin-left: -30px;
+  font-family: "Lato", sans-serif;
 }
 
 .column-numbers {
@@ -212,6 +213,7 @@ export default {
   gap: 1px;
   position: absolute;
   margin-top: -30px;
+  font-family: "Lato", sans-serif;
 }
 
 .swal-title-custom-class {
