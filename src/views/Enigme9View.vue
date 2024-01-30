@@ -200,6 +200,7 @@ export default {
 
 .card-front {
   background-color: #d9d9d9;
+  font-family: "Lato", sans-serif;
 }
 
 .card-back {
@@ -213,13 +214,5 @@ export default {
 
 .matched {
   background-color: #3e9399;
-}
-
-.game-over {
-  margin-top: 20px;
-  text-align: center;
-  font-size: 24px;
-  font-weight: bold;
-  color: #e53e3e;
 }
 </style>
