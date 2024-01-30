@@ -170,8 +170,8 @@ export default {
 }
 
 .cell {
-  width: 30px;
-  height: 30px;
+  width: 30px !important;
+  height: 30px !important;
   max-width: 30px !important;
   max-height: 30px !important;
   border: 1px solid #ccc;
@@ -184,8 +184,8 @@ export default {
 }
 
 .number-cell {
-  width: 30px;
-  height: 30px;
+  width: 30px !important;
+  height: 30px !important;
   max-width: 30px !important;
   max-height: 30px !important;
   border: 1px solid #ccc;
