@@ -172,8 +172,8 @@ export default {
 .cell {
   width: 30px;
   height: 30px;
-  max-width: 30px;
-  max-height: 30px;
+  max-width: 30px !important;
+  max-height: 30px !important;
   border: 1px solid #ccc;
   background-color: #fff;
   cursor: pointer;
@@ -186,8 +186,8 @@ export default {
 .number-cell {
   width: 30px;
   height: 30px;
-  max-width: 30px;
-  max-height: 30px;
+  max-width: 30px !important;
+  max-height: 30px !important;
   border: 1px solid #ccc;
   background-color: #d9d9d9;
   display: flex;
