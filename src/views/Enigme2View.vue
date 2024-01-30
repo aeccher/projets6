@@ -17,14 +17,21 @@
   </div>
 
   <div class="grid grid-cols-2">
-    <ul class="mt-10 ml-32 font-lato text-sm">
-      <li class="flex items-center">Il te faut ici déchiffrer ce mot <span class="text-7xl">⠧⠕⠊⠗</span></li>
-      <li class="mt-5">
-        Une fois le mot trouvé, il te suffit de reporter l’addition si besoin du numéro de chaque lettre dans l’ordre alphabétique pour
-        trouver le code secret à entrer.
-      </li>
-      <li class="mt-2"><span class="underline underline-offset-2">Exemple</span>: M est la 13ème lettre de l’alphabet donc 1+3 = 4</li>
-    </ul>
+    <div>
+      <ul class="mt-10 ml-32 font-lato text-sm">
+        <li class="flex items-center">Il te faut ici déchiffrer ce mot <span class="text-7xl">⠧⠕⠊⠗</span></li>
+        <li class="mt-5">
+          Une fois le mot trouvé, il te suffit de reporter l’addition si besoin du numéro de chaque lettre dans l’ordre alphabétique pour
+          trouver le code secret à entrer.
+        </li>
+        <li class="mt-2"><span class="underline underline-offset-2">Exemple</span>: M est la 13ème lettre de l’alphabet donc 1+3 = 4</li>
+      </ul>
+      <div class="ml-32 grid">
+        <label for="notes" class="mt-6 font-lato text-sm">Zone pour prendre des notes :</label>
+        <textarea id="notes" name="notes" class="mt-2 h-36 w-96 rounded-lg border border-noir font-lato text-lg"></textarea>
+      </div>
+    </div>
+
     <div class="m-auto">
       <div id="affichage" class="mb-4 h-12 w-96 border border-gris p-2 text-2xl"></div>
       <div class="grid w-96 grid-cols-3 gap-2">
@@ -41,7 +48,7 @@
   <Router-Link to="/enigme3">
     <button
       v-if="codeCorrect"
-      class="font-Lato m-auto mt-20 flex h-10 items-center justify-center rounded-lg bg-bleu px-20 text-blanc hover:bg-opacity-75"
+      class="font-Lato m-auto mt-10 flex h-10 items-center justify-center rounded-lg bg-bleu px-20 text-blanc hover:bg-opacity-75"
     >
       Énigme suivante
     </button></Router-Link

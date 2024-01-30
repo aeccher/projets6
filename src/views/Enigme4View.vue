@@ -23,8 +23,14 @@
   <p class="ml-32 font-lato text-sm">
     Traduit déjà le clignement de l'oeil en point et les yeux fermés en tiret puis regarde le morse écrit.
   </p>
+  <div class="grid grid-cols-2">
+    <video v-if="!isPopupOpen" src="/src/assets/video/morse.mp4" controls class="my-10 ml-32 h-48"></video>
 
-  <video v-if="!isPopupOpen" src="/src/assets/video/morse.mp4" controls class="m-auto my-10 h-48"></video>
+    <div class="ml-10 grid">
+      <label for="notes" class="mt-10 font-lato text-sm">Zone pour prendre des notes :</label>
+      <textarea id="notes" name="notes" class="-mt-10 h-36 w-96 rounded-lg border border-noir font-lato text-lg"></textarea>
+    </div>
+  </div>
 
   <!-- Champ texte pour la validation -->
   <label for="motMorse" class="ml-32 font-lato text-sm text-noir">Entrez le mot :</label>
