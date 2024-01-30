@@ -19,9 +19,7 @@
         <p class="px-8 pt-4 font-lato text-sm">Pour revenir à la page qui donne accès à toute les énigmes, il faudra cliquer sur :</p>
         <IconRetour />
       </div>
-      <p class="px-8 pt-4 font-lato text-sm">
-        Munissez vous de quoi écrire (un papier et un stylo) cela vous sera utile pour réfléchir aux énigmes.
-      </p>
+      <p class="px-8 pt-4 font-lato text-sm">N'hésitez pas à utliser les zones pour écrire si besoin.</p>
       <Router-Link to="/enigmes">
         <button
           class="font-Lato m-auto mb-10 mt-20 flex h-10 items-center justify-center rounded-lg bg-jaune px-20 text-noir hover:bg-opacity-75"
