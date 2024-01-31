@@ -20,10 +20,18 @@
     India Lima Tango Echo Sierra Uniform Foxtrot Foxtrot India Tango Delta Echo Charlie Romeo India Romeo Echo Oscar Tango Alpha November
   </p>
 
-  <!-- Champ texte pour la validation -->
-  <label for="mot" class="ml-32 font-lato text-sm text-bleu">Entrez le mot :</label>
-  <input type="text" id="mot" v-model="mot" class="ml-4 rounded-md border-2 border-bleu" />
-  <button @click="validermot" class="ml-4 cursor-pointer rounded-xl bg-bleu py-2 px-4 text-blanc">Valider</button>
+  <div class="grid grid-cols-2">
+    <div>
+      <!-- Champ texte pour la validation -->
+      <label for="mot" class="ml-32 font-lato text-sm text-bleu">Entrez le mot :</label>
+      <input type="text" id="mot" v-model="mot" class="ml-4 rounded-md border-2 border-bleu" />
+      <button @click="validermot" class="ml-4 cursor-pointer rounded-xl bg-bleu py-2 px-4 text-blanc">Valider</button>
+    </div>
+    <div class="ml-10 grid">
+      <label for="notes" class="font-lato text-sm">Zone pour prendre des notes :</label>
+      <textarea id="notes" name="notes" class="mt-2 h-36 w-96 rounded-lg border border-noir font-lato text-lg"></textarea>
+    </div>
+  </div>
 </template>
 
 <script>
