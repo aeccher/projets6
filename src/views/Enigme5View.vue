@@ -42,6 +42,7 @@
 <script>
 import IconRetour from "/src/components/icons/IconRetour.vue";
 import Swal from "sweetalert2"; // Utilisation de SweetAlert2
+import EnigmeService from "../EnigmeService.js";
 
 export default {
   components: { IconRetour },
@@ -54,6 +55,9 @@ export default {
       selectedWordElement: null,
       selectedLanguageElement: null,
     };
+  },
+  created() {
+    this.enigmeService = EnigmeService;
   },
   computed: {
     allCorrect() {
@@ -86,6 +90,7 @@ export default {
       if (this.allResponses.length === 5) {
         if (this.allCorrect) {
           this.correct = true; // Met à jour l'état de la validation
+          EnigmeService.setEnigmeResolue("enigme5");
           Swal.fire({
             icon: "success",
             title: "Félicitations!",

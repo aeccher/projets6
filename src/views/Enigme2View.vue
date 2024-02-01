@@ -58,6 +58,7 @@
 import IconIndice from "/src/components/icons/IconIndice.vue";
 import IconRetour from "/src/components/icons/IconRetour.vue";
 import Swal from "sweetalert2"; // Utilisation de SweetAlert2
+import EnigmeService from "../EnigmeService.js";
 
 export default {
   components: { IconIndice, IconRetour },
@@ -69,6 +70,9 @@ export default {
       chiffres: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9],
       codeCorrect: false, // Variable pour suivre l'état de la validation
     };
+  },
+  created() {
+    this.enigmeService = EnigmeService;
   },
   methods: {
     openPopup() {
@@ -99,6 +103,7 @@ export default {
     verifierCombinaison() {
       if (this.combinaisonActuelle === this.combinaisonAttendue) {
         this.codeCorrect = true; // Met à jour l'état de la validation
+        EnigmeService.setEnigmeResolue("enigme2");
         Swal.fire({
           icon: "success",
           title: "Félicitations!",

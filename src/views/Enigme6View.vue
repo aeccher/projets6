@@ -76,6 +76,7 @@
 import IconIndice from "/src/components/icons/IconIndice.vue";
 import IconRetour from "/src/components/icons/IconRetour.vue";
 import Swal from "sweetalert2";
+import EnigmeService from "../EnigmeService.js";
 
 export default {
   components: { IconIndice, IconRetour },
@@ -85,6 +86,9 @@ export default {
       motCorrect: false, // Ajoutez une propriété pour suivre si le mot est correct
       lettresDeposees: 0, // Ajoutez une propriété pour suivre le nombre de lettres déposées
     };
+  },
+  created() {
+    this.enigmeService = EnigmeService;
   },
   methods: {
     openPopup() {
@@ -118,6 +122,7 @@ export default {
           setTimeout(() => {
             // Vérifier le mot lorsque toutes les cases sont remplies
             this.motCorrect = this.checkWord();
+            EnigmeService.setEnigmeResolue("enigme6");
 
             // Afficher une alerte selon le résultat
             if (this.motCorrect) {

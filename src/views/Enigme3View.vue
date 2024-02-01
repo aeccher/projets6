@@ -54,6 +54,7 @@
 import IconIndice from "/src/components/icons/IconIndice.vue";
 import IconRetour from "/src/components/icons/IconRetour.vue";
 import Swal from "sweetalert2"; // Utilisation de SweetAlert2
+import EnigmeService from "../EnigmeService.js";
 
 export default {
   components: { IconIndice, IconRetour },
@@ -78,6 +79,9 @@ export default {
         .fill()
         .map(() => Array(10).fill(0)),
     };
+  },
+  created() {
+    this.enigmeService = EnigmeService;
   },
   methods: {
     openPopup() {
@@ -109,6 +113,7 @@ export default {
     checkCompletion() {
       if (this.arrayEquals(this.clickedPattern, this.correctPattern)) {
         this.correct = true;
+        EnigmeService.setEnigmeResolue("enigme3");
         setTimeout(function () {
           Swal.fire({
             icon: "success",

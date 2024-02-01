@@ -50,6 +50,7 @@
 import IconIndice from "/src/components/icons/IconIndice.vue";
 import IconRetour from "/src/components/icons/IconRetour.vue";
 import Swal from "sweetalert2";
+import EnigmeService from "../EnigmeService.js";
 
 export default {
   components: { IconIndice, IconRetour },
@@ -62,6 +63,9 @@ export default {
       imageFolderPath: "/src/assets/images/",
       imageExtension: ".webp", // Extension des images
     };
+  },
+  created() {
+    this.enigmeService = EnigmeService;
   },
   methods: {
     openPopup() {
@@ -112,6 +116,7 @@ export default {
 
       if (currentOrder === expectedOrder) {
         this.correct = true;
+        EnigmeService.setEnigmeResolue("enigme7");
         Swal.fire({
           icon: "success",
           title: "Félicitations!",

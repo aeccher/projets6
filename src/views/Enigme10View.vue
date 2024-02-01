@@ -38,6 +38,7 @@
 import IconIndice from "/src/components/icons/IconIndice.vue";
 import IconRetour from "/src/components/icons/IconRetour.vue";
 import Swal from "sweetalert2"; // Utilisation de SweetAlert2
+import EnigmeService from "../EnigmeService.js";
 
 export default {
   components: { IconIndice, IconRetour },
@@ -46,6 +47,9 @@ export default {
       isPopupOpen: false,
       mot: "", // Variable pour stocker la valeur du champ texte
     };
+  },
+  created() {
+    this.enigmeService = EnigmeService;
   },
   methods: {
     openPopup() {
@@ -60,6 +64,7 @@ export default {
 
       // Vérifier si la valeur correspond au mot correct
       if (this.mot.toLowerCase() === motCorrect) {
+        EnigmeService.setEnigmeResolue("enigme10");
         Swal.fire({
           icon: "success",
           title: "Félicitations!",

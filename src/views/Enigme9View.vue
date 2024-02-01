@@ -49,6 +49,7 @@
 import IconIndice from "/src/components/icons/IconIndice.vue";
 import IconRetour from "/src/components/icons/IconRetour.vue";
 import Swal from "sweetalert2"; // Utilisation de SweetAlert2
+import EnigmeService from "../EnigmeService.js";
 
 export default {
   components: { IconIndice, IconRetour },
@@ -84,6 +85,9 @@ export default {
       flippedCards: [],
       correct: false,
     };
+  },
+  created() {
+    this.enigmeService = EnigmeService;
   },
   computed: {
     shuffledCards() {
@@ -144,6 +148,7 @@ export default {
     checkWin() {
       if (this.cards.every((card) => card.isMatched)) {
         this.correct = true;
+        EnigmeService.setEnigmeResolue("enigme9");
         Swal.fire({
           icon: "success",
           title: "Félicitations!",

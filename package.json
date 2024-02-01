@@ -9,9 +9,11 @@
   "dependencies": {
     "@heroicons/vue": "^1.0.6",
     "@supabase/supabase-js": "^2.39.3",
+    "js-cookie": "^3.0.5",
     "sweetalert2": "^11.10.4",
     "vue": "^3.2.33",
-    "vue-router": "^4.0.14"
+    "vue-router": "^4.0.14",
+    "vuex": "^4.1.0"
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^2.3.1",

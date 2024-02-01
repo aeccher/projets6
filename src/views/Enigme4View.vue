@@ -52,6 +52,7 @@
 import IconIndice from "/src/components/icons/IconIndice.vue";
 import IconRetour from "/src/components/icons/IconRetour.vue";
 import Swal from "sweetalert2"; // Utilisation de SweetAlert2
+import EnigmeService from "../EnigmeService.js";
 
 export default {
   components: { IconIndice, IconRetour },
@@ -61,6 +62,9 @@ export default {
       motMorse: "", // Variable pour stocker la valeur du champ texte
       motCorrect: false, // Variable pour suivre l'état de la validation
     };
+  },
+  created() {
+    this.enigmeService = EnigmeService;
   },
   methods: {
     openPopup() {
@@ -76,6 +80,7 @@ export default {
       // Vérifier si la valeur correspond au mot correct
       if (this.motMorse.toLowerCase() === motCorrectLSF) {
         this.motCorrect = true; // Met à jour l'état de la validation
+        EnigmeService.setEnigmeResolue("enigme4");
         Swal.fire({
           icon: "success",
           title: "Félicitations!",
