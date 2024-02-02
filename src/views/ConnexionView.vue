@@ -15,6 +15,7 @@
 <script>
 import { createClient } from "@supabase/supabase-js";
 import Swal from "sweetalert2"; // Utilisation de SweetAlert2
+import Cookies from "js-cookie"; // importation du module js-cookie
 
 const supabaseUrl = "https://nhgheoiccbmykckowsom.supabase.co";
 const supabaseKey =
@@ -31,7 +32,12 @@ export default {
   methods: {
     async submitForm() {
       try {
-        const { data, error } = await supabase.from("utilisateurs").upsert([{ pseudo: this.pseudo }], { onConflict: ["pseudo"] });
+        const { data, error } = await supabase
+          .from("utilisateurs")
+          .upsert([{ pseudo: this.pseudo }], { onConflict: ["pseudo"] })
+          .select("*");
+
+        //console.log("Réponse de Supabase:", data, error); // Ajoutez cette ligne pour inspecter la réponse
 
         if (error) {
           Swal.fire({
@@ -55,8 +61,12 @@ export default {
               content: "swal-content-custom-class", // Classe pour personnaliser le style du contenu/texte
             },
           }).then(() => {
-            // Redirection vers '/enigmes' après la fermeture du message (alert)
-            this.$router.push("/consignes");
+            if (data && Array.isArray(data) && data.length > 0 && data[0].id) {
+              const userId = data[0].id; // Récupérer l'ID de l'utilisateur depuis la réponse de Supabase
+              //console.log(userId);
+              Cookies.set("userId", userId); // Enregistrez l'ID de l'utilisateur dans un cookie
+              this.$router.push("/consignes"); // Redirection vers '/consignes'
+            }
           });
         }
       } catch (error) {

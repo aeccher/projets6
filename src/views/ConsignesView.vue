@@ -34,8 +34,14 @@
 <script>
 import IconIndice from "/src/components/icons/IconIndice.vue";
 import IconRetour from "/src/components/icons/IconRetour.vue";
+import Cookies from "js-cookie"; // importation du module js-cookie
 
 export default {
   components: { IconIndice, IconRetour },
+  mounted() {
+    // Récupérer l'ID de l'utilisateur depuis le cookie
+    const userId = Cookies.get("userId");
+    //console.log(userId);
+  },
 };
 </script>
