@@ -59,6 +59,7 @@ import IconIndice from "/src/components/icons/IconIndice.vue";
 import IconRetour from "/src/components/icons/IconRetour.vue";
 import Swal from "sweetalert2"; // Utilisation de SweetAlert2
 import EnigmeService from "../EnigmeService.js";
+import Cookies from "js-cookie"; // importation du module js-cookie
 
 export default {
   components: { IconIndice, IconRetour },
@@ -103,7 +104,8 @@ export default {
     verifierCombinaison() {
       if (this.combinaisonActuelle === this.combinaisonAttendue) {
         this.codeCorrect = true; // Met à jour l'état de la validation
-        EnigmeService.setEnigmeResolue("enigme2");
+        const userId = Cookies.get("userId"); // Récupérer l'ID de l'utilisateur depuis le cookie
+        EnigmeService.setEnigmeResolue("enigme2", userId);
         Swal.fire({
           icon: "success",
           title: "Félicitations!",

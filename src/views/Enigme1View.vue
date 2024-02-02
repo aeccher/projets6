@@ -49,6 +49,7 @@ import IconIndice from "/src/components/icons/IconIndice.vue";
 import IconRetour from "/src/components/icons/IconRetour.vue";
 import Swal from "sweetalert2"; // Utilisation de SweetAlert2
 import EnigmeService from "../EnigmeService.js";
+import Cookies from "js-cookie"; // importation du module js-cookie
 
 export default {
   components: { IconIndice, IconRetour },
@@ -76,7 +77,8 @@ export default {
       // Vérifier si la valeur correspond au mot correct
       if (this.motLSF.toLowerCase() === motCorrectLSF) {
         this.motCorrect = true; // Met à jour l'état de la validation
-        EnigmeService.setEnigmeResolue("enigme1");
+        const userId = Cookies.get("userId"); // Récupérer l'ID de l'utilisateur depuis le cookie
+        EnigmeService.setEnigmeResolue("enigme1", userId);
         Swal.fire({
           icon: "success",
           title: "Félicitations!",

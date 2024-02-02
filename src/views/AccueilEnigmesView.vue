@@ -1,10 +1,12 @@
 <template>
   <main class="grid h-[900px] bg-bleu">
+    <!-- Affichez le compteur d'énigmes résolues -->
+    <div class="mr-8 mt-4 text-right font-lato text-xl text-white">Énigmes résolues : {{ enigmesResoluesCount }}</div>
     <Router-Link :to="{ name: 'Consignes', params: { utilisateurId: utilisateurId } }"
       ><IconRetour class="absolute left-10 top-10 cursor-pointer" :color="'white'"
     /></Router-Link>
 
-    <div class="-mt-32 flex justify-center gap-10">
+    <div class="-mt-80 flex justify-center gap-10">
       <Router-Link :to="{ name: 'Enigme1', params: { utilisateurId: utilisateurId } }"
         ><div class="relative flex items-center justify-center">
           <IconBulle class="pt-10" :style="getEnigmeStyle('enigme1')" />
@@ -46,7 +48,7 @@
         </div></Router-Link
       >
     </div>
-    <div class="-mt-52 flex justify-center gap-10">
+    <div class="-mt-64 flex justify-center gap-10">
       <Router-Link :to="{ name: 'Enigme6', params: { utilisateurId: utilisateurId } }"
         ><div class="relative flex items-center justify-center">
           <IconBulle class="pt-10" :style="getEnigmeStyle('enigme6')" />
@@ -95,16 +97,21 @@
 import IconBulle from "/src/components/icons/IconBulle.vue";
 import IconRetour from "/src/components/icons/IconRetour.vue";
 import EnigmeService from "../EnigmeService.js";
+import { ref } from "vue";
+import { supabase } from "../supabase.config.js";
+import Cookies from "js-cookie"; // importation du module js-cookie
 
 export default {
   components: { IconRetour, IconBulle },
   data() {
     return {
       enigmeService: EnigmeService,
+      enigmesResoluesCount: ref(0),
     };
   },
   created() {
     this.enigmeService = EnigmeService;
+    this.fetchEnigmesResoluesCount();
   },
   methods: {
     getEnigmeStyle(enigme) {
@@ -113,6 +120,19 @@ export default {
         color: isResolue ? "#30485E" : "#D9D9D9",
         fill: isResolue ? "#D9D9D9" : "#30485E",
       };
+    },
+    async fetchEnigmesResoluesCount() {
+      const userId = Cookies.get("userId");
+      if (userId) {
+        const { data, error } = await supabase.from("utilisateurs").select("enigmes_resolues_count").eq("id", userId);
+
+        if (error) {
+          console.error("Erreur lors de la récupération du compteur dans Supabase:", error.message);
+        } else if (data.length > 0) {
+          // Mettez à jour le compteur dans le composant
+          this.enigmesResoluesCount = ref(data[0].enigmes_resolues_count);
+        }
+      }
     },
   },
 };
