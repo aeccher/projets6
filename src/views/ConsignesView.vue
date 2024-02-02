@@ -27,6 +27,7 @@
           Jouer
         </button></Router-Link
       >
+      <Router-link to="/mentions-legales" class="ml-6 font-lato text-sm hover:underline">Mentions légales</Router-link>
     </div>
   </main>
 </template>

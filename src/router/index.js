@@ -14,6 +14,7 @@ import Enigme10View from '../views/Enigme10View.vue'
 import FinView from '../views/FinView.vue'
 import ConnexionView from '../views/ConnexionView.vue'
 import AccueilEnigmesView from '../views/AccueilEnigmesView.vue'
+import MentionsLegalesView from '../views/MentionsLegalesView.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -33,6 +34,7 @@ const router = createRouter({
     { path: '/fin', name: 'Fin', component: FinView },
     { path: '/connexion', name: 'Connexion', component: ConnexionView },
     { path: '/enigmes', name: 'AccueilEnigmes', component: AccueilEnigmesView },
+    { path: '/mentions-legales', name: 'MentionsLegales', component: MentionsLegalesView },
   ]
 })
 
