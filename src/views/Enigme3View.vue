@@ -3,7 +3,7 @@
     <IconIndice @click="openPopup" class="absolute top-10 right-10 cursor-pointer" />
 
     <!-- Fenêtre pop-up -->
-    <div v-if="isPopupOpen" class="fixed top-0 left-0 flex h-full w-full items-center justify-center bg-noir bg-opacity-50">
+    <div v-if="isPopupOpen" class="fixed top-0 left-0 z-50 flex h-full w-full items-center justify-center bg-noir bg-opacity-50">
       <div class="relative rounded-xl bg-blanc p-8">
         <span @click="closePopup" class="absolute top-4 right-4 cursor-pointer">&times;</span>
         <!-- Contenu de la fenêtre pop-up -->
@@ -22,19 +22,23 @@
       <h2 class="py-6 text-center font-playfair text-6xl text-noir">Énigme n°3</h2>
     </div>
 
-    <p class="mt-10 ml-32 font-lato text-sm">
-      Il suffit, en utilisant les hiéroglyphes, de reproduire la première lettre du mot hiéroglyphe en noircissant au clic les cases de la
-      grille.
-    </p>
-    <!-- Grille -->
-    <div id="grille" class="mt-12 ml-32">
-      <div class="row-numbers">
-        <!-- Numéros de ligne -->
-        <div v-for="i in 10" :key="i" class="cell number-cell">{{ i }}</div>
-      </div>
-      <div class="column-numbers">
-        <!-- Numéros de colonne -->
-        <div v-for="i in 10" :key="i" class="cell number-cell">{{ i }}</div>
+    <div class="grid grid-cols-2">
+      <p class="mt-10 ml-32 font-lato text-sm">
+        Il suffit, en utilisant les hiéroglyphes, de reproduire la première lettre du mot hiéroglyphe en noircissant au clic les cases de la
+        grille.
+      </p>
+      <div>
+        <!-- Grille -->
+        <div id="grille" class="mt-12 ml-32">
+          <div class="row-numbers">
+            <!-- Numéros de ligne -->
+            <div v-for="i in 10" :key="i" class="cells number-cells">{{ i }}</div>
+          </div>
+          <div class="column-numbers">
+            <!-- Numéros de colonne -->
+            <div v-for="i in 10" :key="i" class="cells number-cells">{{ i }}</div>
+          </div>
+        </div>
       </div>
     </div>
 
@@ -153,7 +157,7 @@ export default {
       for (let i = 0; i < 10; i++) {
         for (let j = 0; j < 10; j++) {
           const cell = document.createElement("div");
-          cell.classList.add("cell");
+          cell.classList.add("cells");
           cell.dataset.row = i;
           cell.dataset.col = j;
           cell.addEventListener("click", () => this.toggleCellColor(cell));
@@ -176,11 +180,11 @@ export default {
   gap: 1px;
 }
 
-.cell {
-  width: 30px !important;
-  height: 30px !important;
-  max-width: 30px !important;
-  max-height: 30px !important;
+.cells {
+  width: 30px;
+  height: 30px;
+  max-width: 30px;
+  max-height: 30px;
   border: 1px solid #ccc;
   background-color: #fff;
   cursor: pointer;
@@ -190,11 +194,11 @@ export default {
   background-color: rgb(0, 0, 0);
 }
 
-.number-cell {
-  width: 30px !important;
-  height: 30px !important;
-  max-width: 30px !important;
-  max-height: 30px !important;
+.number-cells {
+  width: 30px;
+  height: 30px;
+  max-width: 30px;
+  max-height: 30px;
   border: 1px solid #ccc;
   background-color: #d9d9d9;
   display: flex;
