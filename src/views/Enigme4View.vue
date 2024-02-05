@@ -7,35 +7,39 @@
       <span @click="closePopup" class="absolute top-4 right-4 cursor-pointer">&times;</span>
       <!-- Contenu de la fenêtre pop-up -->
       <p class="text-center font-playfair text-xl text-noir">Le code Morse</p>
-      <img src="/src/assets/images/morse.webp" alt="Image du code morse" class="m-auto mt-5 w-1/2" />
+      <img src="/src/assets/images/morse.webp" alt="Image du code morse" class="m-auto mt-5 md:w-1/2" />
     </div>
   </div>
 
   <Router-Link to="/enigmes"><IconRetour class="absolute left-10 top-10 w-14 cursor-pointer" /></Router-Link>
 
-  <div class="ml-32 mt-20 h-28 w-96 rounded-xl border-2 border-jaune">
-    <h2 class="py-6 text-center font-playfair text-6xl text-noir">Énigme n°4</h2>
+  <div class="mt-40 ml-10 h-14 w-44 rounded-xl border-2 border-jaune md:mt-20 md:ml-32 md:h-28 md:w-96">
+    <h2 class="py-2 text-center font-playfair text-3xl text-noir md:py-6 md:text-6xl">Énigme n°4</h2>
   </div>
 
-  <p class="mt-10 ml-32 font-lato text-sm">
+  <p class="mt-10 ml-10 font-lato text-sm md:ml-32">
     La vidéo permet de retrouver le mot secret. Un clin d'oeil vaut un point dans le morse écrit. Les deux yeux fermés valent un trait.
   </p>
-  <p class="ml-32 font-lato text-sm">
+  <p class="ml-10 font-lato text-sm md:ml-32">
     Traduit déjà le clignement de l'oeil en point et les yeux fermés en tiret puis regarde le morse écrit.
   </p>
-  <div class="grid grid-cols-2">
-    <video v-if="!isPopupOpen" src="/src/assets/video/morse.mp4" controls class="my-10 ml-32 h-48"></video>
+  <div class="grid md:grid-cols-2">
+    <video v-if="!isPopupOpen" src="/src/assets/video/morse.mp4" controls class="my-10 ml-10 h-48 w-72 md:ml-32 md:w-auto"></video>
 
     <div class="ml-10 grid">
       <label for="notes" class="mt-10 font-lato text-sm">Zone pour prendre des notes :</label>
-      <textarea id="notes" name="notes" class="-mt-10 h-36 w-96 rounded-lg border border-noir font-lato text-lg"></textarea>
+      <textarea
+        id="notes"
+        name="notes"
+        class="mb-10 h-36 w-72 rounded-lg border border-noir font-lato text-lg md:mb-0 md:-mt-10 md:w-96"
+      ></textarea>
     </div>
   </div>
 
   <!-- Champ texte pour la validation -->
-  <label for="motMorse" class="ml-32 font-lato text-sm text-noir">Entrez le mot :</label>
+  <label for="motMorse" class="mt-10 ml-10 font-lato text-sm text-noir md:ml-32">Entrez le mot :</label>
   <input type="text" id="motMorse" v-model="motMorse" class="ml-4 rounded-md border-2 border-jaune" />
-  <button @click="validermotMorse" class="ml-4 cursor-pointer rounded-xl bg-jaune py-2 px-4 text-noir">Valider</button>
+  <button @click="validermotMorse" class="ml-10 cursor-pointer rounded-xl bg-jaune py-2 px-4 text-noir md:ml-4">Valider</button>
 
   <!-- Affiche le bouton si le mot est correct -->
   <Router-Link to="/enigme5">
