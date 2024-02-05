@@ -12,13 +12,13 @@
 
   <Router-Link to="/enigmes"><IconRetour class="absolute left-10 top-10 w-14 cursor-pointer" /></Router-Link>
 
-  <div class="ml-32 mt-20 h-28 w-96 rounded-xl border-2 border-bleu">
-    <h2 class="py-6 text-center font-playfair text-6xl text-noir">Énigme n°2</h2>
+  <div class="mt-40 ml-10 h-14 w-44 rounded-xl border-2 border-bleu md:ml-32 md:mt-20 md:h-28 md:w-96">
+    <h2 class="py-2 text-center font-playfair text-3xl text-noir md:py-6 md:text-6xl">Énigme n°2</h2>
   </div>
 
-  <div class="grid grid-cols-2">
+  <div class="grid grid-cols-1 md:grid-cols-2">
     <div>
-      <ul class="mt-10 ml-32 font-lato text-sm">
+      <ul class="mx-10 mt-10 font-lato text-sm md:ml-32">
         <li class="flex items-center">Il te faut ici déchiffrer ce mot <span class="text-7xl">⠧⠕⠊⠗</span></li>
         <li class="mt-5">
           Une fois le mot trouvé, il te suffit de reporter l’addition si besoin du numéro de chaque lettre dans l’ordre alphabétique pour
@@ -26,15 +26,15 @@
         </li>
         <li class="mt-2"><span class="underline underline-offset-2">Exemple</span>: M est la 13ème lettre de l’alphabet donc 1+3 = 4</li>
       </ul>
-      <div class="ml-32 grid">
+      <div class="ml-10 grid md:ml-32">
         <label for="notes" class="mt-6 font-lato text-sm">Zone pour prendre des notes :</label>
-        <textarea id="notes" name="notes" class="mt-2 h-36 w-96 rounded-lg border border-noir font-lato text-lg"></textarea>
+        <textarea id="notes" name="notes" class="mt-2 h-36 w-72 rounded-lg border border-noir font-lato text-lg md:w-96"></textarea>
       </div>
     </div>
 
-    <div class="m-auto">
-      <div id="affichage" class="mb-4 h-12 w-96 border border-gris p-2 text-2xl"></div>
-      <div class="grid w-96 grid-cols-3 gap-2">
+    <div class="ml-10 md:m-auto md:ml-0">
+      <div id="affichage" class="mt-10 mb-4 h-12 w-72 border border-gris p-2 text-2xl md:mt-0 md:w-96"></div>
+      <div class="grid w-72 grid-cols-3 gap-2 md:w-96">
         <button v-for="chiffre in chiffres" :key="chiffre" @click="ajouterChiffre(chiffre)" class="border border-gris p-2 text-xl">
           {{ chiffre }}
         </button>
