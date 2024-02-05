@@ -6,7 +6,7 @@
       <span @click="closePopup" class="absolute top-4 right-4 cursor-pointer">&times;</span>
       <!-- Contenu de la fenêtre pop-up -->
       <p class="text-center font-playfair text-xl text-noir">L’alphabet de l’écriture braille</p>
-      <img src="/src/assets/images/braille.webp" alt="Image de l'alphabet braille" class="m-auto mt-5 w-1/2" />
+      <img src="/src/assets/images/braille.webp" alt="Image de l'alphabet braille" class="m-auto mt-5 md:w-1/2" />
     </div>
   </div>
 

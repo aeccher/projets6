@@ -17,8 +17,8 @@
 
   <Router-Link to="/enigmes"><IconRetour class="absolute left-10 top-10 w-14 cursor-pointer" /></Router-Link>
 
-  <div class="ml-32 mt-20 h-28 w-96 rounded-xl border-2 border-bleu">
-    <h2 class="py-6 text-center font-playfair text-6xl text-noir">Énigme n°6</h2>
+  <div class="mt-40 ml-10 h-14 w-44 rounded-xl border-2 border-bleu md:ml-32 md:mt-20 md:h-28 md:w-96">
+    <h2 class="py-2 text-center font-playfair text-3xl text-noir md:py-6 md:text-6xl">Énigme n°6</h2>
 
     <!-- Zone pour le glisser-déposer de runes -->
     <div class="container mt-24">
@@ -29,7 +29,7 @@
     </div>
 
     <!-- Lettres à glisser -->
-    <div class="container text-2xl">
+    <div class="container grid grid-cols-7 text-2xl md:flex">
       <div class="draggable" id="draggable-fehu" draggable="true" @dragstart="drag">ᚠ</div>
       <div class="draggable" id="draggable-uruz" draggable="true" @dragstart="drag">ᚢ</div>
       <div class="draggable" id="draggable-thurisaz" draggable="true" @dragstart="drag">ᚦ</div>
@@ -57,7 +57,7 @@
     </div>
   </div>
 
-  <p class="mt-10 ml-32 font-lato text-sm">
+  <p class="mt-10 ml-10 font-lato text-sm md:ml-32">
     Il faut faire glisser les lettres runes dans les cases pour former le mot <span class="font-semibold">rune</span>.
   </p>
 
