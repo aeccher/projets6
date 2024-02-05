@@ -6,30 +6,30 @@
       <span @click="closePopup" class="absolute top-4 right-4 cursor-pointer">&times;</span>
       <!-- Contenu de la fenêtre pop-up -->
       <p class="text-center font-playfair text-xl text-noir">L'alphabet militaire de l'OTAN</p>
-      <img src="/src/assets/images/alphabet_otan.webp" alt="Image de l'alphabet militaire de l'OTAN" class="m-auto mt-5 w-1/2" />
+      <img src="/src/assets/images/alphabet_otan.webp" alt="Image de l'alphabet militaire de l'OTAN" class="mt-5md:w-1/2 m-auto" />
     </div>
   </div>
 
   <Router-Link to="/enigmes"><IconRetour class="absolute left-10 top-10 w-14 cursor-pointer" /></Router-Link>
 
-  <div class="ml-32 mt-20 h-28 w-96 rounded-xl border-2 border-bleu">
-    <h2 class="py-6 text-center font-playfair text-6xl text-noir">Énigme n°10</h2>
+  <div class="mt-40 ml-10 h-14 w-44 rounded-xl border-2 border-bleu md:ml-32 md:mt-20 md:h-28 md:w-96">
+    <h2 class="pt-2 text-center font-playfair text-3xl text-noir md:py-6 md:text-6xl">Énigme n°10</h2>
   </div>
 
-  <p class="my-10 ml-32 font-lato text-sm">
+  <p class="my-10 ml-10 font-lato text-sm md:ml-32">
     India Lima Tango Echo Sierra Uniform Foxtrot Foxtrot India Tango Delta Echo Charlie Romeo India Romeo Echo Oscar Tango Alpha November
   </p>
 
-  <div class="grid grid-cols-2">
+  <div class="grid grid-cols-1 md:grid-cols-2">
     <div>
       <!-- Champ texte pour la validation -->
-      <label for="mot" class="ml-32 font-lato text-sm text-bleu">Entrez le mot :</label>
+      <label for="mot" class="ml-10 font-lato text-sm text-bleu md:ml-32">Entrez le mot :</label>
       <input type="text" id="mot" v-model="mot" class="ml-4 rounded-md border-2 border-bleu" />
-      <button @click="validermot" class="ml-4 cursor-pointer rounded-xl bg-bleu py-2 px-4 text-blanc">Valider</button>
+      <button @click="validermot" class="ml-10 cursor-pointer rounded-xl bg-bleu py-2 px-4 text-blanc md:ml-4">Valider</button>
     </div>
-    <div class="ml-10 grid">
+    <div class="ml-10 mt-10 grid md:mt-0">
       <label for="notes" class="font-lato text-sm">Zone pour prendre des notes :</label>
-      <textarea id="notes" name="notes" class="mt-2 h-36 w-96 rounded-lg border border-noir font-lato text-lg"></textarea>
+      <textarea id="notes" name="notes" class="mt-2 h-36 w-72 rounded-lg border border-noir font-lato text-lg md:w-96"></textarea>
     </div>
   </div>
 </template>
