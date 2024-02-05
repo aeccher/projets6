@@ -8,7 +8,7 @@
         <span @click="closePopup" class="absolute top-4 right-4 cursor-pointer">&times;</span>
         <!-- Contenu de la fenêtre pop-up -->
         <p class="text-center font-playfair text-xl text-noir">Hiéroglyphes</p>
-        <img src="/src/assets/images/hieroglyphes.webp" alt="Image de l'alphabet hiéroglyphes" class="m-auto mt-5 w-1/2" />
+        <img src="/src/assets/images/hieroglyphes.webp" alt="Image de l'alphabet hiéroglyphes" class="m-auto mt-5 md:w-1/2" />
         <p class="mt-10 font-lato text-sm">
           Début à la 2ème colonne 9ème ligne. 8 cases vers le haut / 7 cases vers la droite / 7 cases vers le bas / 3 cases à gauche / 5
           cases vers le haut
@@ -18,18 +18,18 @@
 
     <Router-Link to="/enigmes"><IconRetour class="absolute left-10 top-10 w-14 cursor-pointer" /></Router-Link>
 
-    <div class="ml-32 mt-20 h-28 w-96 rounded-xl border-2 border-orange">
-      <h2 class="py-6 text-center font-playfair text-6xl text-noir">Énigme n°3</h2>
+    <div class="mt-40 ml-10 h-14 w-44 rounded-xl border-2 border-orange md:mt-20 md:ml-32 md:h-28 md:w-96">
+      <h2 class="py-2 text-center font-playfair text-3xl text-noir md:py-6 md:text-6xl">Énigme n°3</h2>
     </div>
 
-    <div class="grid grid-cols-2">
-      <p class="mt-10 ml-32 font-lato text-sm">
+    <div class="m-auto grid md:grid-cols-2">
+      <p class="ml-5 mt-10 font-lato text-sm md:ml-32">
         Il suffit, en utilisant les hiéroglyphes, de reproduire la première lettre du mot hiéroglyphe en noircissant au clic les cases de la
         grille.
       </p>
       <div>
         <!-- Grille -->
-        <div id="grille" class="mt-12 ml-32">
+        <div id="grille" class="mt-12 ml-10 md:ml-32">
           <div class="row-numbers">
             <!-- Numéros de ligne -->
             <div v-for="i in 10" :key="i" class="cells number-cells">{{ i }}</div>
