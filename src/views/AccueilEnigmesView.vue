@@ -7,7 +7,7 @@
     /></Router-Link>
 
     <div class="-mt-80 flex justify-center gap-10">
-      <Router-Link :to="{ name: 'Enigme1', params: { utilisateurId: utilisateurId } }"
+      <Router-Link to="/enigme1"
         ><div class="relative flex items-center justify-center">
           <IconBulle class="pt-10" :style="getEnigmeStyle('enigme1')" />
           <div class="absolute inset-0 flex items-center justify-center">
@@ -15,7 +15,7 @@
           </div>
         </div></Router-Link
       >
-      <Router-Link :to="{ name: 'Enigme2', params: { utilisateurId: utilisateurId } }"
+      <Router-Link to="/enigme2"
         ><div class="relative flex items-center justify-center">
           <IconBulle class="pt-10" :style="getEnigmeStyle('enigme2')" />
           <div class="absolute inset-0 flex items-center justify-center">
@@ -23,7 +23,7 @@
           </div>
         </div></Router-Link
       >
-      <Router-Link :to="{ name: 'Enigme3', params: { utilisateurId: utilisateurId } }"
+      <Router-Link to="/enigme3"
         ><div class="relative flex items-center justify-center">
           <IconBulle class="pt-10" :style="getEnigmeStyle('enigme3')" />
           <div class="absolute inset-0 flex items-center justify-center">
@@ -31,7 +31,7 @@
           </div>
         </div></Router-Link
       >
-      <Router-Link :to="{ name: 'Enigme4', params: { utilisateurId: utilisateurId } }"
+      <Router-Link to="/enigme4"
         ><div class="relative flex items-center justify-center">
           <IconBulle class="pt-10" :style="getEnigmeStyle('enigme4')" />
           <div class="absolute inset-0 flex items-center justify-center">
@@ -39,7 +39,7 @@
           </div>
         </div></Router-Link
       >
-      <Router-Link :to="{ name: 'Enigme5', params: { utilisateurId: utilisateurId } }"
+      <Router-Link to="/enigme5"
         ><div class="relative flex items-center justify-center">
           <IconBulle class="pt-10" :style="getEnigmeStyle('enigme5')" />
           <div class="absolute inset-0 flex items-center justify-center">
@@ -49,7 +49,7 @@
       >
     </div>
     <div class="-mt-64 flex justify-center gap-10">
-      <Router-Link :to="{ name: 'Enigme6', params: { utilisateurId: utilisateurId } }"
+      <Router-Link to="/enigme6"
         ><div class="relative flex items-center justify-center">
           <IconBulle class="pt-10" :style="getEnigmeStyle('enigme6')" />
           <div class="absolute inset-0 flex items-center justify-center">
@@ -57,7 +57,7 @@
           </div>
         </div></Router-Link
       >
-      <Router-Link :to="{ name: 'Enigme7', params: { utilisateurId: utilisateurId } }"
+      <Router-Link to="/enigme7"
         ><div class="relative flex items-center justify-center">
           <IconBulle class="pt-10" :style="getEnigmeStyle('enigme7')" />
           <div class="absolute inset-0 flex items-center justify-center">
@@ -65,7 +65,7 @@
           </div>
         </div></Router-Link
       >
-      <Router-Link :to="{ name: 'Enigme8', params: { utilisateurId: utilisateurId } }"
+      <Router-Link to="/enigme8"
         ><div class="relative flex items-center justify-center">
           <IconBulle class="pt-10" :style="getEnigmeStyle('enigme8')" />
           <div class="absolute inset-0 flex items-center justify-center">
@@ -73,7 +73,7 @@
           </div>
         </div></Router-Link
       >
-      <Router-Link :to="{ name: 'Enigme9', params: { utilisateurId: utilisateurId } }"
+      <Router-Link to="/enigme9"
         ><div class="relative flex items-center justify-center">
           <IconBulle class="pt-10" :style="getEnigmeStyle('enigme9')" />
           <div class="absolute inset-0 flex items-center justify-center">
@@ -81,7 +81,7 @@
           </div>
         </div></Router-Link
       >
-      <Router-Link :to="{ name: 'Enigme10', params: { utilisateurId: utilisateurId } }"
+      <Router-Link to="/enigme10"
         ><div class="relative flex items-center justify-center">
           <IconBulle class="pt-10" :style="getEnigmeStyle('enigme10')" />
           <div class="absolute inset-0 flex items-center justify-center">
