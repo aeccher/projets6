@@ -1,12 +1,12 @@
 <template>
-  <main class="grid h-[900px] bg-bleu">
+  <main class="grid h-[2000Px] bg-bleu md:h-[900px]">
     <!-- Affichez le compteur d'énigmes résolues -->
     <div class="mr-8 mt-4 text-right font-lato text-xl text-white">Énigmes résolues : {{ enigmesResoluesCount }}</div>
     <Router-Link :to="{ name: 'Consignes', params: { utilisateurId: utilisateurId } }"
       ><IconRetour class="absolute left-10 top-10 cursor-pointer" :color="'white'"
     /></Router-Link>
 
-    <div class="-mt-80 flex justify-center gap-10">
+    <div class="md:-mt-80 md:flex md:justify-center md:gap-10">
       <Router-Link to="/enigme1"
         ><div class="relative flex items-center justify-center">
           <IconBulle class="pt-10" :style="getEnigmeStyle('enigme1')" />
@@ -48,7 +48,7 @@
         </div></Router-Link
       >
     </div>
-    <div class="-mt-64 flex justify-center gap-10">
+    <div class="md:-mt-64 md:flex md:justify-center md:gap-10">
       <Router-Link to="/enigme6"
         ><div class="relative flex items-center justify-center">
           <IconBulle class="pt-10" :style="getEnigmeStyle('enigme6')" />
