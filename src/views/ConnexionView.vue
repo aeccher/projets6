@@ -3,7 +3,7 @@
     <div class="m-auto mt-10 h-[600px] w-11/12 border-2 border-orange">
       <h2 class="px-8 pt-40 text-center font-playfair text-6xl text-noir">Connexion</h2>
 
-      <form @submit.prevent="submitForm" class="mt-20 flex items-center justify-center gap-4">
+      <form @submit.prevent="submitForm" class="mt-20 grid items-center justify-center gap-4 sm:flex">
         <label class="font-lato text-sm text-noir" for="pseudo">Entrez un pseudo :</label>
         <input v-model="pseudo" type="text" id="pseudo" required class="rounded-lg border border-orange p-2" />
         <button type="submit" class="rounded-lg bg-orange p-2 font-lato text-sm text-blanc">Enregistrer</button>
