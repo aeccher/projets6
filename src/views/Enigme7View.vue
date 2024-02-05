@@ -10,24 +10,26 @@
       <img
         src="/src/assets/images/matoran.webp"
         alt="Image de lettres matoran qui correspondent à l'alphabet français"
-        class="m-auto mt-5 w-1/2"
+        class="m-auto mt-5 md:w-1/2"
       />
     </div>
   </div>
 
   <Router-Link to="/enigmes"><IconRetour class="absolute left-10 top-10 w-14 cursor-pointer" /></Router-Link>
 
-  <div class="ml-32 mt-20 h-28 w-96 rounded-xl border-2 border-orange">
-    <h2 class="py-6 text-center font-playfair text-6xl text-noir">Énigme n°7</h2>
+  <div class="mt-40 ml-10 h-14 w-44 rounded-xl border-2 border-orange md:ml-32 md:mt-20 md:h-28 md:w-96">
+    <h2 class="py-2 text-center font-playfair text-3xl text-noir md:py-6 md:text-6xl">Énigme n°7</h2>
   </div>
 
-  <p class="mt-10 ml-32 font-lato text-sm">Il faut déchiffrer les lettres et trouve le mot en remettant dans l’ordre les lettres.</p>
+  <p class="mt-10 ml-10 font-lato text-sm md:ml-32">
+    Il faut déchiffrer les lettres et trouve le mot en remettant dans l’ordre les lettres.
+  </p>
 
-  <div class="container mt-10 ml-32 grid">
+  <div class="container mt-10 ml-10 grid md:ml-32">
     <div class="flex items-center justify-center" @dragover.prevent="dragOver" @drop="drop">
       <div v-for="(letter, index) in shuffledWord" :key="index" class="m-2">
         <div class="cursor-move rounded-lg border border-noir p-4" @dragstart="dragStart(index)" draggable="true">
-          <img :src="getImagePath(letter)" alt="Lettre Matoran" class="h-12 w-12" />
+          <img :src="getImagePath(letter)" alt="Lettre Matoran" class="h-6 w-6 md:h-12 md:w-12" />
         </div>
       </div>
     </div>
