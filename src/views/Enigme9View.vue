@@ -7,19 +7,19 @@
       <span @click="closePopup" class="absolute top-4 right-4 cursor-pointer">&times;</span>
       <!-- Contenu de la fenêtre pop-up -->
       <p class="text-center font-playfair text-xl text-noir">Le code ASCII</p>
-      <img src="/src/assets/images/ascii.webp" alt="Image d'extrait du code ASCII" class="m-auto mt-5 w-1/2" />
+      <img src="/src/assets/images/ascii.webp" alt="Image d'extrait du code ASCII" class="m-auto mt-5 md:w-1/2" />
     </div>
   </div>
 
   <Router-Link to="/enigmes"><IconRetour class="absolute left-10 top-10 w-14 cursor-pointer" /></Router-Link>
 
-  <div class="ml-32 mt-20 h-28 w-96 rounded-xl border-2 border-vert">
-    <h2 class="py-6 text-center font-playfair text-6xl text-noir">Énigme n°9</h2>
+  <div class="mt-40 ml-10 h-14 w-44 rounded-xl border-2 border-vert md:ml-32 md:mt-20 md:h-28 md:w-96">
+    <h2 class="py-2 text-center font-playfair text-3xl text-noir md:py-6 md:text-6xl">Énigme n°9</h2>
   </div>
 
-  <p class="mt-10 ml-32 font-lato text-sm">C'est un jeu de memory. Il te suffit de former les bonnes paires.</p>
+  <p class="mt-10 ml-10 font-lato text-sm md:ml-32">C'est un jeu de memory. Il te suffit de former les bonnes paires.</p>
   <div>
-    <div class="ml-32 mt-5 flex max-w-[600px] flex-wrap">
+    <div class="ml-10 mt-5 flex max-w-[600px] flex-wrap md:ml-32">
       <div
         v-for="(card, index) in cards"
         :key="index"
