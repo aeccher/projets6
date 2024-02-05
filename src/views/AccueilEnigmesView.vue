@@ -1,5 +1,5 @@
 <template>
-  <main class="grid h-[2000Px] bg-bleu md:h-[900px]">
+  <main class="grid h-[2100px] bg-bleu md:h-[900px]">
     <!-- Affichez le compteur d'énigmes résolues -->
     <div class="mr-8 mt-4 text-right font-lato text-xl text-white">Énigmes résolues : {{ enigmesResoluesCount }}</div>
     <Router-Link :to="{ name: 'Consignes', params: { utilisateurId: utilisateurId } }"
