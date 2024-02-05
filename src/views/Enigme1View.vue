@@ -16,22 +16,22 @@
 
   <Router-Link to="/enigmes"><IconRetour class="absolute left-10 top-10 w-14 cursor-pointer" /></Router-Link>
 
-  <div class="ml-32 mt-20 h-28 w-96 rounded-xl border-2 border-vert">
-    <h2 class="py-6 text-center font-playfair text-6xl text-noir">Énigme n°1</h2>
+  <div class="mt-40 ml-10 h-14 w-44 rounded-xl border-2 border-vert md:ml-32 md:mt-20 md:h-28 md:w-96">
+    <h2 class="py-2 text-center font-playfair text-3xl text-noir md:py-6 md:text-6xl">Énigme n°1</h2>
   </div>
 
-  <p class="mt-10 ml-32 font-lato text-sm">
+  <p class="mt-10 ml-10 font-lato text-sm md:ml-32">
     Il faut trouver le mot suivant, écrit en utilisant la dactylographie de la Langue des signes française (LSF) :
   </p>
   <img
     src="/src/assets/images/mot_lsf.webp"
     alt="Image d'un mot écrit en dactylographie de la Langue des signes française"
-    class="m-auto mt-5 mb-20 w-1/4"
+    class="m-auto mt-5 mb-20 md:w-1/4"
   />
   <!-- Champ texte pour la validation -->
-  <label for="motLSF" class="ml-32 font-lato text-sm text-vert">Entrez le mot :</label>
+  <label for="motLSF" class="ml-10 font-lato text-sm text-vert md:ml-32">Entrez le mot :</label>
   <input type="text" id="motLSF" v-model="motLSF" class="ml-4 rounded-md border-2 border-vert" />
-  <button @click="validerMotLSF" class="ml-4 cursor-pointer rounded-xl bg-vert py-2 px-4 text-blanc">Valider</button>
+  <button @click="validerMotLSF" class="ml-10 cursor-pointer rounded-xl bg-vert py-2 px-4 text-blanc md:ml-4">Valider</button>
 
   <!-- Affiche le bouton si le mot est correct -->
   <Router-Link to="/enigme2">
