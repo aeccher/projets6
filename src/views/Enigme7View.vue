@@ -63,7 +63,7 @@ export default {
       correct: false,
       originalWord: "LEGO",
       shuffledWord: this.shuffleArray("LEGO".split("")),
-      imageFolderPath: "../assets/images/",
+      imageFolderPath: "/public/",
       imageExtension: ".webp", // Extension des images
     };
   },
