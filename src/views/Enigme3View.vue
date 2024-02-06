@@ -10,8 +10,8 @@
         <p class="text-center font-playfair text-xl text-noir">Hiéroglyphes</p>
         <img src="/src/assets/images/hieroglyphes.webp" alt="Image de l'alphabet hiéroglyphes" class="m-auto mt-5 md:w-1/2" />
         <p class="mt-10 font-lato text-sm">
-          Début à la 2ème colonne 9ème ligne. 8 cases vers le haut / 7 cases vers la droite / 7 cases vers le bas / 3 cases à gauche / 5
-          cases vers le haut
+          Début à la 2ème colonne 9ème ligne. 8 cases vers le haut / 7 cases vers la droite (sans compter la première) / 7 cases vers le bas
+          (sans compter la première) / 3 cases à gauche (sans compter la première) / 3 cases vers le haut (sans compter la première)
         </p>
       </div>
     </div>
@@ -25,7 +25,7 @@
     <div class="m-auto grid md:grid-cols-2">
       <p class="ml-5 mt-10 font-lato text-sm md:ml-32">
         Il suffit, en utilisant les hiéroglyphes, de reproduire la première lettre du mot hiéroglyphe en noircissant au clic les cases de la
-        grille.
+        grille. La lettre se dessine avec les cases noires sur fond blanc.
       </p>
       <div>
         <!-- Grille -->

@@ -21,8 +21,8 @@
       <ul class="mx-10 mt-10 font-lato text-sm md:ml-32">
         <li class="flex items-center">Il te faut ici déchiffrer ce mot <span class="text-7xl">⠧⠕⠊⠗</span></li>
         <li class="mt-5">
-          Une fois le mot trouvé, il te suffit de reporter l’addition si besoin du numéro de chaque lettre dans l’ordre alphabétique pour
-          trouver le code secret à entrer.
+          Une fois le mot trouvé, il te suffit de reporter, l’addition si besoin, du numéro de chaque lettre dans l’ordre alphabétique pour
+          trouver le code secret (composé de 4 chiffres) à entrer.
         </li>
         <li class="mt-2"><span class="underline underline-offset-2">Exemple</span>: M est la 13ème lettre de l’alphabet donc 1+3 = 4</li>
       </ul>
