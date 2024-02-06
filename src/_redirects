@@ -1,26 +1,2 @@
-/ /connexion 
-/connexion /consignes 
-/consignes /enigmes 
-/enigmes /enigme1 
-/enigmes /enigme2 
-/enigmes /enigme3 
-/enigmes /enigme4 
-/enigmes /enigme5 
-/enigmes /enigme7 
-/enigmes /enigme8 
-/enigmes /enigme9 
-/enigmes /enigme10 
-/enigme1 /enigmes 
-/enigme2 /enigmes 
-/enigme3 /enigmes 
-/enigme4 /enigmes 
-/enigme5 /enigmes 
-/enigme6 /enigmes 
-/enigme7 /enigmes 
-/enigme8 /enigmes 
-/enigme9 /enigmes 
-/enigme10 /enigmes 
-/enigme10 /fin 
-/fin / 
-
+/* /index.html 200
 
