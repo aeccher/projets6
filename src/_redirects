@@ -1,25 +1,25 @@
-/ /connexion 301
-/connexion /consignes 301
-/consignes /enigmes 301
-/enigmes /enigme1 301
-/enigmes /enigme2 301
-/enigmes /enigme3 301
-/enigmes /enigme4 301
-/enigmes /enigme5 301
-/enigmes /enigme7 301
-/enigmes /enigme8 301
-/enigmes /enigme9 301
-/enigmes /enigme10 301
-/enigme1 /enigmes 301
-/enigme2 /enigmes 301
-/enigme3 /enigmes 301
-/enigme4 /enigmes 301
-/enigme5 /enigmes 301
-/enigme6 /enigmes 301
-/enigme7 /enigmes 301
-/enigme8 /enigmes 301
-/enigme9 /enigmes 301
-/enigme10 /enigmes 301
+/ /connexion 
+/connexion /consignes 
+/consignes /enigmes 
+/enigmes /enigme1 
+/enigmes /enigme2 
+/enigmes /enigme3 
+/enigmes /enigme4 
+/enigmes /enigme5 
+/enigmes /enigme7 
+/enigmes /enigme8 
+/enigmes /enigme9 
+/enigmes /enigme10 
+/enigme1 /enigmes 
+/enigme2 /enigmes 
+/enigme3 /enigmes 
+/enigme4 /enigmes 
+/enigme5 /enigmes 
+/enigme6 /enigmes 
+/enigme7 /enigmes 
+/enigme8 /enigmes 
+/enigme9 /enigmes 
+/enigme10 /enigmes 
 /enigme10 /fin 
 /fin / 
 
