@@ -18,7 +18,8 @@
   </div>
 
   <p class="mt-10 ml-10 font-lato text-sm md:ml-32">
-    La vidéo permet de retrouver le mot secret. Un clin d'oeil vaut un point dans le morse écrit. Les deux yeux fermés valent un trait.
+    La vidéo permet de retrouver le mot secret. Un clin d'oeil vaut un point dans le morse écrit. Les deux yeux fermés valent un trait. Le
+    mot à trouver est composé de 6 lettres.
   </p>
   <p class="ml-10 font-lato text-sm md:ml-32">
     Traduit déjà le clignement de l'oeil en point et les yeux fermés en tiret puis regarde le morse écrit.
