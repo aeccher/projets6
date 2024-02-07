@@ -27,7 +27,14 @@
 
   <div class="container mt-10 ml-10 grid md:ml-32">
     <div class="flex items-center justify-center" @dragover.prevent="dragOver" @drop="drop">
-      <div v-for="(letter, index) in shuffledWord" :key="index" class="m-2">
+      <div
+        v-for="(letter, index) in shuffledWord"
+        :key="index"
+        class="m-2"
+        @touchstart.prevent="touchStart(index, $event)"
+        @touchmove.prevent="touchMove(index, $event)"
+        @touchend.prevent="touchEnd"
+      >
         <div class="cursor-move rounded-lg border border-noir p-4" @dragstart="dragStart(index)" draggable="true">
           <img :src="getImagePath(letter)" alt="Lettre Matoran" class="h-6 w-6 md:h-12 md:w-12" />
         </div>
@@ -64,6 +71,11 @@ export default {
       originalWord: "LEGO",
       shuffledWord: this.shuffleArray("LEGO".split("")),
       imageExtension: ".webp", // Extension des images
+      dragIndex: -1,
+      startX: 0,
+      startY: 0,
+      offsetX: 0,
+      offsetY: 0,
     };
   },
   created() {
@@ -111,6 +123,34 @@ export default {
       const x = event.clientX - rect.left;
       const index = Math.floor(x / (rect.width / this.shuffledWord.length));
       return Math.min(index, this.shuffledWord.length - 1);
+    },
+    touchStart(index, event) {
+      this.dragIndex = index;
+      const touch = event.touches[0];
+      this.startX = touch.clientX;
+      this.startY = touch.clientY;
+      this.offsetX = 0;
+      this.offsetY = 0;
+    },
+    touchMove(index, event) {
+      if (this.dragIndex === -1) return;
+      const touch = event.touches[0];
+      const dx = touch.clientX - this.startX;
+      const dy = touch.clientY - this.startY;
+      this.offsetX = dx;
+      this.offsetY = dy;
+      const newIndex = this.calculateNewIndex(index);
+      if (newIndex !== this.dragIndex) {
+        this.moveLetter(this.dragIndex, newIndex);
+        this.dragIndex = newIndex;
+      }
+    },
+    touchEnd() {
+      this.dragIndex = -1;
+    },
+    calculateNewIndex(index) {
+      const newIndex = Math.round(index + this.offsetX / 50); // Adjust the divisor to control sensitivity
+      return Math.max(0, Math.min(this.shuffledWord.length - 1, newIndex));
     },
     checkOrder() {
       const currentOrder = this.shuffledWord.join("");
