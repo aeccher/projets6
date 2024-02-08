@@ -60,9 +60,9 @@
     </li>
     <li class="m-5">
       <span class="font-bold text-noir underline">Litiges</span> : Les présentes conditions du site
-      <span class="underline">https://portfolio2023.agathe-eccher.fr </span>sont régies par les lois françaises et toute contestation ou
-      litiges qui pourraient naître de l’interprétation ou de l’exécution de celles-ci seront de la compétence exclusive des tribunaux dont
-      dépend le siège social de la société. La langue de référence, pour le règlement de contentieux éventuels, est le français.
+      <span class="underline">https://enicom.agathe-eccher.fr </span>sont régies par les lois françaises et toute contestation ou litiges
+      qui pourraient naître de l’interprétation ou de l’exécution de celles-ci seront de la compétence exclusive des tribunaux dont dépend
+      le siège social de la société. La langue de référence, pour le règlement de contentieux éventuels, est le français.
     </li>
   </ul>
 </template>
